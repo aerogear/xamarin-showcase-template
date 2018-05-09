@@ -1,5 +1,5 @@
 ﻿
-using Acr.UserDialogs;
+//using Acr.UserDialogs;
 using AeroGear.Mobile.Auth;
 using AeroGear.Mobile.Auth.Config;
 using AeroGear.Mobile.Core;
@@ -29,11 +29,11 @@ namespace Example.Android
             
             CachedImageRenderer.Init(true);
             ImageCircleRenderer.Init();
-            UserDialogs.Init(this);
+            //UserDialogs.Init(this);
             Instance = this;
             var app = new App();
             MobileCoreAndroid.Init(app.GetType().Assembly,ApplicationContext);
-            var authService = AuthService.InitializeService();
+            IAuthService authService = AuthService.InitializeService();
             var authConfig = AuthenticationConfig.Builder.RedirectUri("org.aerogear.mobile.example:/callback").Build();
             authService.Configure(authConfig);
             LoadApplication(app);

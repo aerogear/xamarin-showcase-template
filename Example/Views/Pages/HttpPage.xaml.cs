@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Example.Models;
-using Acr.UserDialogs;
+//using Acr.UserDialogs;
 using AeroGear.Mobile.Core;
 using AeroGear.Mobile.Core.Logging;
 
@@ -43,10 +43,10 @@ namespace Example.Views.Pages
         {
             PlaceholderUser user = (PlaceholderUser)e.Item;
             var message = $"{user.name}\n{user.email}";
-            var toastConfig = new ToastConfig(message);
-            toastConfig.Duration = TimeSpan.FromMilliseconds(3000);
-            toastConfig.BackgroundColor = System.Drawing.Color.FromArgb(12, 131, 193);
-            UserDialogs.Instance.Toast(toastConfig);
+            //var toastConfig = new ToastConfig(message);
+            //toastConfig.Duration = TimeSpan.FromMilliseconds(3000);
+            //toastConfig.BackgroundColor = System.Drawing.Color.FromArgb(12, 131, 193);
+            //UserDialogs.Instance.Toast(toastConfig);
             LOGGER.Info("HttpPage", message);
         }
     }
