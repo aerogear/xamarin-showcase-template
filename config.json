@@ -1,0 +1,30 @@
+{
+    "proj-refs-remove": {
+        "Example": [
+            "..\\..\\Core\\Core\\Core.csproj",
+            "..\\..\\Auth\\Auth\\Auth.csproj"
+        ],
+        "Example.Android": [
+            "..\\..\\Core\\Core.Platform.Android\\Core.Platform.Android.csproj",
+            "..\\..\\Core\\Core\\Core.csproj",
+            "..\\..\\Auth\\Auth\\Auth.csproj",
+            "..\\..\\Auth\\Auth.Platform.Android\\Auth.Platform.Android.csproj"
+        ],
+        "Example.iOS": ["..\\..\\Core\\Core.Platform.iOS\\Core.Platform.iOS.csproj",
+            "..\\..\\Core\\Core\\Core.csproj",
+            "..\\..\\Auth\\Auth\\Auth.csproj",
+            "..\\..\\Auth\\Auth.Platform.iOS\\Auth.Platform.iOS.csproj"]
+    },
+    "deps-add": {
+        "Example": {
+            "AeroGear.Mobile.Core": "0.0.3",
+            "AeroGear.Mobile.Auth": "0.0.2"
+        },
+        "Example.Android": {
+            "AeroGear.Mobile.Auth.Platform.Android": "0.0.5"
+        },
+        "Example.iOS": {
+            "AeroGear.Mobile.Auth.Platform.iOS": "0.0.3"
+        }
+    }
+}
