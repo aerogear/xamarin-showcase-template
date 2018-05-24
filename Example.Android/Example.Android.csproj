@@ -53,7 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="AeroGear.Mobile.Auth.Platform.Android">
-      <Version>0.0.5</Version>
+      <Version>0.0.6</Version>
     </PackageReference>
     <PackageReference Include="System.Json">
       <Version>4.4.0</Version>

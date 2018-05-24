@@ -5,8 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AeroGear.Mobile.Auth" Version="0.0.2" />
-    <PackageReference Include="AeroGear.Mobile.Core" Version="0.0.3" />
+    <PackageReference Include="AeroGear.Mobile.Auth" Version="0.0.6" />
+    <PackageReference Include="AeroGear.Mobile.Core" Version="0.0.6" />
     <PackageReference Include="ListDiff" Version="1.0.7" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
     <PackageReference Include="Xamarin.Forms" Version="2.5.1.527436" />
