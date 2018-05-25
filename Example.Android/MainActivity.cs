@@ -3,6 +3,7 @@
 using AeroGear.Mobile.Auth;
 using AeroGear.Mobile.Auth.Config;
 using AeroGear.Mobile.Core;
+using AeroGear.Mobile.Security;
 using Android.App;
 using Android.Content;
 using Android.Content.PM;
@@ -33,6 +34,7 @@ namespace Example.Android
             Instance = this;
             var app = new App();
             MobileCoreAndroid.Init(app.GetType().Assembly,ApplicationContext);
+            SecurityService.InitializeService();
             IAuthService authService = AuthService.InitializeService();
             var authConfig = AuthenticationConfig.Builder.RedirectUri("org.aerogear.mobile.example:/callback").Build();
             authService.Configure(authConfig);

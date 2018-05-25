@@ -5,8 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AeroGear.Mobile.Auth" Version="0.0.6" />
-    <PackageReference Include="AeroGear.Mobile.Core" Version="0.0.6" />
+    
+    
     <PackageReference Include="ListDiff" Version="1.0.7" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
     <PackageReference Include="Xamarin.Forms" Version="2.5.1.527436" />
@@ -91,6 +91,8 @@
   <ItemGroup>
     <Folder Include="Utils\" />
     <Folder Include="Auth\" />
+    <Folder Include="Security\" />
+    <Folder Include="ViewModels\Security\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Resources\ic_auth.svg" />
@@ -104,4 +106,5 @@
     <None Remove="Resources\ic_openid_connect.png" />
     <None Remove="Resources\mobile-services.json" />
   </ItemGroup>
-</Project>
+<ItemGroup><ProjectReference Include="..\..\Core\Core\Core.csproj" /><ProjectReference Include="..\..\Auth\Auth\Auth.csproj" /><ProjectReference Include="..\..\Security\Security.csproj" />
+</ItemGroup></Project>
