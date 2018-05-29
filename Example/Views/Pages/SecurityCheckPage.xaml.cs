@@ -39,7 +39,7 @@ namespace Example.Views.Pages
             ReportCheckResults(securityChecks);
         }
 
-        private void ReportCheckResults(IList<ISecurityCheckType> securityChecks)
+        private void ReportCheckResults(ICollection<ISecurityCheckType> securityChecks)
         {
             var securityService = MobileCore.Instance.GetService<ISecurityService>();
             foreach (var check in securityChecks)

@@ -135,50 +135,30 @@
       <Project>{F0217CFC-1E56-4703-AECE-EE4196A59B17}</Project>
       <Name>Example</Name>
     </ProjectReference>
-  <ProjectReference Include="..\..\Core\Core.Platform.iOS\Core.Platform.iOS.csproj">
-    <Project>{C5B8A6AF-90D0-43DC-B097-A5F3CEB01E9F}</Project>
-    <Name>Core.Platform.iOS</Name>
-  </ProjectReference><ProjectReference Include="..\..\Core\Core\Core.csproj">
-  <Project>{F1EA4BBA-D775-45C0-99DA-DB0590BEE87E}</Project>
-  <Name>Core</Name>
-</ProjectReference><ProjectReference Include="..\..\Auth\Auth\Auth.csproj">
-  <Project>{55FF3B02-07D1-46F3-B0D5-584D3B98467E}</Project>
-  <Name>Auth</Name>
-</ProjectReference><ProjectReference Include="..\..\Auth\Auth.Platform.iOS\Auth.Platform.iOS.csproj">
-  <Project>{CBB87B9E-D526-46B1-B05A-AD3D383EACED}</Project>
-  <Name>Auth.Platform.iOS</Name>
-</ProjectReference><ProjectReference Include="..\..\Core\Core.Platform.iOS\Core.Platform.iOS.csproj">
-  <Project>{C5B8A6AF-90D0-43DC-B097-A5F3CEB01E9F}</Project>
-  <Name>Core.Platform.iOS</Name>
-</ProjectReference><ProjectReference Include="..\..\Core\Core\Core.csproj">
-  <Project>{F1EA4BBA-D775-45C0-99DA-DB0590BEE87E}</Project>
-  <Name>Core</Name>
-</ProjectReference><ProjectReference Include="..\..\Auth\Auth\Auth.csproj">
-  <Project>{55FF3B02-07D1-46F3-B0D5-584D3B98467E}</Project>
-  <Name>Auth</Name>
-</ProjectReference><ProjectReference Include="..\..\Auth\Auth.Platform.iOS\Auth.Platform.iOS.csproj">
-  <Project>{CBB87B9E-D526-46B1-B05A-AD3D383EACED}</Project>
-  <Name>Auth.Platform.iOS</Name>
-</ProjectReference><ProjectReference Include="..\..\Core\Core.Platform.iOS\Core.Platform.iOS.csproj">
-  <Project>{C5B8A6AF-90D0-43DC-B097-A5F3CEB01E9F}</Project>
-  <Name>Core.Platform.iOS</Name>
-</ProjectReference><ProjectReference Include="..\..\Core\Core\Core.csproj">
-  <Project>{F1EA4BBA-D775-45C0-99DA-DB0590BEE87E}</Project>
-  <Name>Core</Name>
-</ProjectReference><ProjectReference Include="..\..\Auth\Auth\Auth.csproj">
-  <Project>{55FF3B02-07D1-46F3-B0D5-584D3B98467E}</Project>
-  <Name>Auth</Name>
-</ProjectReference><ProjectReference Include="..\..\Auth\Auth.Platform.iOS\Auth.Platform.iOS.csproj">
-  <Project>{CBB87B9E-D526-46B1-B05A-AD3D383EACED}</Project>
-  <Name>Auth.Platform.iOS</Name>
-</ProjectReference><ProjectReference Include="..\..\Security\Security.csproj">
-  <Project>{AA2048E3-2324-4922-A7FE-C0589AF4B74F}</Project>
-  <Name>Security</Name>
-</ProjectReference>
-<ProjectReference Include="..\..\Security.Platform.iOS\Security.Platform.iOS.csproj">
-  <Project>{4C856B1A-CE05-4880-B315-D3D3FEA3B3CC}</Project>
-  <Name>Security.Platform.iOS</Name>
-</ProjectReference>
+    <ProjectReference Include="..\..\Auth\Auth\Auth.csproj">
+      <Project>{55FF3B02-07D1-46F3-B0D5-584D3B98467E}</Project>
+      <Name>Auth</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Auth\Auth.Platform.iOS\Auth.Platform.iOS.csproj">
+      <Project>{CBB87B9E-D526-46B1-B05A-AD3D383EACED}</Project>
+      <Name>Auth.Platform.iOS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Core\Core.csproj">
+      <Project>{F1EA4BBA-D775-45C0-99DA-DB0590BEE87E}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Core.Platform.iOS\Core.Platform.iOS.csproj">
+      <Project>{C5B8A6AF-90D0-43DC-B097-A5F3CEB01E9F}</Project>
+      <Name>Core.Platform.iOS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Security\Security\Security.csproj">
+      <Project>{E6A4E78F-25B7-4D82-89A8-F394B82E557A}</Project>
+      <Name>Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Security\Security.Platform.iOS\Security.Platform.iOS.csproj">
+      <Project>{4C856B1A-CE05-4880-B315-D3D3FEA3B3CC}</Project>
+      <Name>Security.Platform.iOS</Name>
+    </ProjectReference>
 </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">

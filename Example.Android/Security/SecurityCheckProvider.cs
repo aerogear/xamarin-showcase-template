@@ -13,14 +13,12 @@ namespace Example.Android.Security
         {
         }
 
-        public IList<ISecurityCheckType> SecurityChecks => new List<ISecurityCheckType> {
-            AeroGear.Mobile.Security.SecurityChecks.NOT_ROOTED,
-            AeroGear.Mobile.Security.SecurityChecks.SCREEN_LOCK,
-            AeroGear.Mobile.Security.SecurityChecks.NOT_IN_EMULATOR,
-            AeroGear.Mobile.Security.SecurityChecks.NO_DEBUGGER,
-            AeroGear.Mobile.Security.SecurityChecks.BACKUP_DISALLOWED,
-            AeroGear.Mobile.Security.SecurityChecks.DEVELOPER_MODE_DISABLED,
-            AeroGear.Mobile.Security.SecurityChecks.ENCRYPTION
-        };
+        public ICollection<ISecurityCheckType> SecurityChecks
+        {
+            get
+            {
+                return (ICollection<ISecurityCheckType>)AeroGear.Mobile.Security.SecurityChecks.GetAllChecks();
+            }
+        }
     }
 }

@@ -106,5 +106,5 @@
     <None Remove="Resources\ic_openid_connect.png" />
     <None Remove="Resources\mobile-services.json" />
   </ItemGroup>
-<ItemGroup><ProjectReference Include="..\..\Core\Core\Core.csproj" /><ProjectReference Include="..\..\Auth\Auth\Auth.csproj" /><ProjectReference Include="..\..\Security\Security.csproj" />
+<ItemGroup><ProjectReference Include="..\..\Core\Core\Core.csproj" /><ProjectReference Include="..\..\Auth\Auth\Auth.csproj" /><ProjectReference Include="..\..\Security\Security\Security.csproj" />
 </ItemGroup></Project>

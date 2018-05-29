@@ -12,11 +12,12 @@ namespace Example.iOS.Security
         {
         }
 
-        public IList<ISecurityCheckType> SecurityChecks => new List<ISecurityCheckType> {
-            AeroGear.Mobile.Security.SecurityChecks.NOT_JAILBROKEN,
-            AeroGear.Mobile.Security.SecurityChecks.DEVICE_LOCK,
-            AeroGear.Mobile.Security.SecurityChecks.NOT_IN_EMULATOR,
-            AeroGear.Mobile.Security.SecurityChecks.NO_DEBUGGER
-        };
+        public ICollection<ISecurityCheckType> SecurityChecks
+        {
+            get
+            {
+                return (ICollection<ISecurityCheckType>)AeroGear.Mobile.Security.SecurityChecks.GetAllChecks();
+            }
+        }
     }
 }

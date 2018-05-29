@@ -6,7 +6,7 @@ namespace Example.Security
 {
     public interface ISecurityCheckProvider
     {
-        IList<ISecurityCheckType> SecurityChecks { get; }
+        ICollection<ISecurityCheckType> SecurityChecks { get; }
     }
 }
 
