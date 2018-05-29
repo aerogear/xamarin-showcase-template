@@ -14,6 +14,9 @@
     <PackageReference Include="Xamarin.FFImageLoading.Transformations" Version="2.3.6" />
     <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.3.6" />
     <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="2.0.2" />
+    <PackageReference Include="AeroGear.Mobile.Security" Version="0.0.7" />
+    <PackageReference Include="AeroGear.Mobile.Core" Version="0.0.6" />
+    <PackageReference Include="AeroGear.Mobile.Auth" Version="0.0.6" />
   </ItemGroup>
 
   <ItemGroup>
@@ -106,5 +109,4 @@
     <None Remove="Resources\ic_openid_connect.png" />
     <None Remove="Resources\mobile-services.json" />
   </ItemGroup>
-<ItemGroup><ProjectReference Include="..\..\Core\Core\Core.csproj" /><ProjectReference Include="..\..\Auth\Auth\Auth.csproj" /><ProjectReference Include="..\..\Security\Security\Security.csproj" />
-</ItemGroup></Project>
+</Project>
