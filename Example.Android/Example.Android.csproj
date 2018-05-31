@@ -65,12 +65,6 @@
     <PackageReference Include="JWT">
       <Version>4.0.0</Version>
     </PackageReference>
-    <PackageReference Include="AeroGear.Mobile.Security">
-      <Version>0.0.7</Version>
-    </PackageReference>
-    <PackageReference Include="AeroGear.Mobile.Security.Platform.Android">
-      <Version>0.0.7</Version>
-    </PackageReference>
     <PackageReference Include="AeroGear.Mobile.Auth.Platform.Android">
       <Version>0.0.6</Version>
     </PackageReference>
@@ -82,6 +76,12 @@
     </PackageReference>
     <PackageReference Include="AeroGear.Mobile.Core.Platform.Android">
       <Version>0.0.6</Version>
+    </PackageReference>
+    <PackageReference Include="AeroGear.Mobile.Security">
+      <Version>0.0.7</Version>
+    </PackageReference>
+    <PackageReference Include="AeroGear.Mobile.Security.Platform.Android">
+      <Version>0.0.7</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

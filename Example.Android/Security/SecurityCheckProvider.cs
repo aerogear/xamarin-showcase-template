@@ -1,6 +1,6 @@
 ﻿using System;
+using System.Linq;
 using System.Collections.Generic;
-using AeroGear.Mobile.Auth.Authenticator;
 using Example.Security;
 using AeroGear.Mobile.Security;
 
@@ -13,11 +13,11 @@ namespace Example.Android.Security
         {
         }
 
-        public ICollection<ISecurityCheckType> SecurityChecks
+        public IList<ISecurityCheckType> SecurityChecks
         {
             get
             {
-                return (ICollection<ISecurityCheckType>)AeroGear.Mobile.Security.SecurityChecks.GetAllChecks();
+                return AeroGear.Mobile.Security.SecurityChecks.GetAllChecks().ToList<ISecurityCheckType>();
             }
         }
     }
