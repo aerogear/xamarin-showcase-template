@@ -123,9 +123,6 @@
   <data name="NavHome" xml:space="preserve">
     <value>Home</value>
   </data>
-  <data name="NavHttp" xml:space="preserve">
-    <value>HTTP</value>
-  </data>
   <data name="NavSecurity" xml:space="preserve">
     <value>Security</value>
   </data>

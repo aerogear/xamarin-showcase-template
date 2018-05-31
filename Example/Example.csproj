@@ -20,8 +20,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="Models\PlaceholderUser.cs" />
     <Compile Remove="Views\Pages\AuthPage.cs" />
     <Compile Remove="Views\Pages\HomePage.xaml %28copy%29.cs" />
+    <Compile Remove="Views\Pages\HttpPage.xaml.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Views\RootPageMenuItem.cs">
@@ -35,9 +37,6 @@
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Views\Pages\HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
       <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="Views\Pages\HttpPage.xaml.cs">
-      <DependentUpon>HttpPage.xaml</DependentUpon>
     </Compile>
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Views\DrawerMenuPage.cs">
       <DependentUpon>DrawerMenuPage.xaml</DependentUpon>
@@ -61,11 +60,11 @@
 
   <ItemGroup>
     <EmbeddedResource Remove="Views\Pages\HomePage %28copy%29.xaml" />
+    <EmbeddedResource Remove="Views\Pages\HttpPage.xaml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\ic_auth.svg" />
     <EmbeddedResource Include="Resources\ic_home.svg" />
-    <EmbeddedResource Include="Resources\ic_http.svg" />
     <EmbeddedResource Include="Resources\ic_label.svg" />
     <EmbeddedResource Include="Resources\ic_phonelink_lock.svg" />
     <EmbeddedResource Include="Resources\aerogear_icon.png" />
@@ -92,6 +91,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Services\" />
     <Folder Include="Utils\" />
     <Folder Include="Auth\" />
     <Folder Include="Security\" />
@@ -100,7 +100,6 @@
   <ItemGroup>
     <None Remove="Resources\ic_auth.svg" />
     <None Remove="Resources\ic_home.svg" />
-    <None Remove="Resources\ic_http.svg" />
     <None Remove="Resources\ic_label.svg" />
     <None Remove="Resources\ic_phonelink_lock.svg" />
     <None Remove="Resources\aerogear_icon.png" />
