@@ -12,7 +12,12 @@
         <ListView x:Name="checkList" ItemsSource="{Binding CheckResults}">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                   <TextCell Text="{Binding Message}" TextColor="{Binding DisplayColor}"/>
+                    <ViewCell>
+                        <StackLayout Padding="10, 5, 15, 5" Orientation="Horizontal" >
+                            <Image Source="{Binding Icon}"/>
+                            <Label Text="{Binding Message}" VerticalOptions="Center" TextColor="{Binding DisplayColor}"/>
+                        </StackLayout >
+                    </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

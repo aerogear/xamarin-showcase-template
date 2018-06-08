@@ -25,7 +25,7 @@ namespace Example.Security
 
         public SecurityCheckResult Check()
         {
-            return new SecurityCheckResultDecorator(securityCheck.Check(), secureMessage, unsecureMessage, secureWhenFailed);
+            return new SecurityCheckResultDecorator(this, securityCheck.Check(), secureMessage, unsecureMessage, secureWhenFailed);
         }
     }
 
@@ -36,7 +36,7 @@ namespace Example.Security
         private readonly string unsecureMessage;
         private readonly SecurityCheckResult result;
 
-        public SecurityCheckResultDecorator(SecurityCheckResult result, string secureMessage, string unsecureMessage, bool secureWhenFailed)
+        public SecurityCheckResultDecorator(ISecurityCheck check, SecurityCheckResult result, string secureMessage, string unsecureMessage, bool secureWhenFailed) : base(check, result.Passed)
         {
             IsSecure = secureWhenFailed ? !result.Passed : result.Passed;
             this.secureMessage = secureMessage;
@@ -47,5 +47,7 @@ namespace Example.Security
         public string Message => IsSecure? secureMessage : unsecureMessage;
 
         public Color DisplayColor => IsSecure ? Color.Green : Color.Red;
+
+        public string Icon => IsSecure ? "ic_passed" : "ic_warning";
     }   
 }
