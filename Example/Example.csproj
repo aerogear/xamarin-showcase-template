@@ -7,21 +7,21 @@
   <ItemGroup>
     
     
-    <PackageReference Include="ListDiff" Version="1.0.7"/>
-    <PackageReference Include="Newtonsoft.Json" Version="11.0.2"/>
-    <PackageReference Include="Xamarin.Forms" Version="2.5.1.527436"/>
-    <PackageReference Include="Xamarin.FFImageLoading.Svg.Forms" Version="2.3.6"/>
-    <PackageReference Include="Xamarin.FFImageLoading.Transformations" Version="2.3.6"/>
-    <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.3.6"/>
-    <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="2.0.2"/>
-    
-    
-    
-  <PackageReference Include="AeroGear.Mobile.Core" Version="1.0.0-alpha"/><PackageReference Include="AeroGear.Mobile.Auth" Version="1.0.0-alpha"/><PackageReference Include="AeroGear.Mobile.Security" Version="1.0.0-alpha"/></ItemGroup>
+    <PackageReference Include="ListDiff" Version="1.0.7" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="Xamarin.Forms" Version="2.5.1.527436" />
+    <PackageReference Include="Xamarin.FFImageLoading.Svg.Forms" Version="2.3.6" />
+    <PackageReference Include="Xamarin.FFImageLoading.Transformations" Version="2.3.6" />
+    <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.3.6" />
+    <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="2.0.2" />
+  <PackageReference Include="AeroGear.Mobile.Core" Version="1.0.0-alpha" />
+   <PackageReference Include="AeroGear.Mobile.Auth" Version="1.0.0-alpha" />
+    <PackageReference Include="AeroGear.Mobile.Security" Version="1.0.0-alpha" />
+  </ItemGroup>
 
   <ItemGroup>
-    <Compile Remove="Views\Pages\AuthPage.cs"/>
-    <Compile Remove="Views\Pages\HomePage.xaml %28copy%29.cs"/>
+    <Compile Remove="Views\Pages\AuthPage.cs" />
+    <Compile Remove="Views\Pages\HomePage.xaml %28copy%29.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Views\RootPageMenuItem.cs">
@@ -57,19 +57,18 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Remove="Views\Pages\HomePage %28copy%29.xaml"/>
+    <EmbeddedResource Remove="Views\Pages\HomePage %28copy%29.xaml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\ic_auth.svg"/>
-    <EmbeddedResource Include="Resources\ic_home.svg"/>
-    <EmbeddedResource Include="Resources\ic_http.svg"/>
-    <EmbeddedResource Include="Resources\ic_label.svg"/>
-    <EmbeddedResource Include="Resources\ic_phonelink_lock.svg"/>
-    <EmbeddedResource Include="Resources\aerogear_icon.png"/>
-    <EmbeddedResource Include="Resources\ag_background.svg"/>
-    <EmbeddedResource Include="Resources\ic_openid.png"/>
-    <EmbeddedResource Include="Resources\ag_background.png"/>
-    <EmbeddedResource Include="Resources\mobile-services.json"/>
+    <EmbeddedResource Include="Resources\ic_auth.svg" />
+    <EmbeddedResource Include="Resources\ic_home.svg" />
+    <EmbeddedResource Include="Resources\ic_label.svg" />
+    <EmbeddedResource Include="Resources\ic_phonelink_lock.svg" />
+    <EmbeddedResource Include="Resources\aerogear_icon.png" />
+    <EmbeddedResource Include="Resources\ag_background.svg" />
+    <EmbeddedResource Include="Resources\ic_openid.png" />
+    <EmbeddedResource Include="Resources\ag_background.png" />
+    <EmbeddedResource Include="Resources\mobile-services.json" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="Views\Pages\ListViewPage1.xaml">
@@ -89,21 +88,20 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Utils\"/>
-    <Folder Include="Auth\"/>
-    <Folder Include="Security\"/>
-    <Folder Include="ViewModels\Security\"/>
+    <Folder Include="Utils\" />
+    <Folder Include="Auth\" />
+    <Folder Include="Security\" />
+    <Folder Include="ViewModels\Security\" />
   </ItemGroup>
   <ItemGroup>
-    <None Remove="Resources\ic_auth.svg"/>
-    <None Remove="Resources\ic_home.svg"/>
-    <None Remove="Resources\ic_http.svg"/>
-    <None Remove="Resources\ic_label.svg"/>
-    <None Remove="Resources\ic_phonelink_lock.svg"/>
-    <None Remove="Resources\aerogear_icon.png"/>
-    <None Remove="Resources\ag_background.png"/>
-    <None Remove="Resources\ag_background.svg"/>
-    <None Remove="Resources\ic_openid_connect.png"/>
-    <None Remove="Resources\mobile-services.json"/>
+    <None Remove="Resources\ic_auth.svg" />
+    <None Remove="Resources\ic_home.svg" />
+    <None Remove="Resources\ic_label.svg" />
+    <None Remove="Resources\ic_phonelink_lock.svg" />
+    <None Remove="Resources\aerogear_icon.png" />
+    <None Remove="Resources\ag_background.png" />
+    <None Remove="Resources\ag_background.svg" />
+    <None Remove="Resources\ic_openid_connect.png" />
+    <None Remove="Resources\mobile-services.json" />
   </ItemGroup>
 </Project>
