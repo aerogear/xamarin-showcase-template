@@ -4,7 +4,7 @@ using Xamarin.Forms;
 
 namespace Example.Security
 {
-    internal class DeviceCheckSecurityDecorator : ISecurityCheck
+    public class DeviceCheckSecurityDecorator : ISecurityCheck
     {
         private readonly ISecurityCheck securityCheck;
         private readonly bool secureWhenFailed;

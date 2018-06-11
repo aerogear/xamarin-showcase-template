@@ -90,6 +90,7 @@
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Auth\AuthenticateOptionsProvider.cs" />
     <Compile Include="Security\SecurityCheckProvider.cs" />
+    <Compile Include="Security\UnsecureAlertWarning.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
