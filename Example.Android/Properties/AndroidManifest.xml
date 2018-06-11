@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="org.aerogear.xamarin.Example" android:installLocation="auto">
 	<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="26" />
-	<application android:label="AeroGear Xamarin Example">
-		<activity android:name="net.openid.appauth.RedirectUriReceiverActivity" android:exported="true">
+	<application android:label="@string/app_name" android:icon="@mipmap/ic_launcher" android:roundIcon="@mipmap/ic_launcher_round">
+		<activity android:name="net.openid.appauth.RedirectUriReceiverActivity" android:exported="true"  android:icon="@mipmap/ic_launcher" android:roundIcon="@mipmap/ic_launcher_round">
       <intent-filter>
         <action android:name="android.intent.action.VIEW" />
         <category android:name="android.intent.category.DEFAULT" />
