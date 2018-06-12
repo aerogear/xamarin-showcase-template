@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Globalization;
 using AeroGear.Mobile.Core;
-using AeroGear.Mobile.Core.Utils;
 using AeroGear.Mobile.Security;
 using Example.Security;
 using Xamarin.Forms;
@@ -42,6 +40,7 @@ namespace Example.Views.Pages
 
         private void ReportCheckResults(ICollection<ISecurityCheck> securityChecks)
         {
+            securityCheckResults.Clear();
             var securityService = MobileCore.Instance.GetService<ISecurityService>();
             foreach (var check in securityChecks)
             {
@@ -52,6 +51,7 @@ namespace Example.Views.Pages
 
             this.trustScore = CalculateTrustScore(new List<SecurityCheckResultDecorator>(securityCheckResults));
             NotifyPropertyChanged(nameof(TrustScore));
+
             if (this.trustScore < SCORE_THRESHOLD)
             {
                 ShowDeviceInsecureAlert();    
@@ -74,6 +74,11 @@ namespace Example.Views.Pages
         {
             int failedResultCount = results.FindAll(result => !result.IsSecure).Count;
             return 100 - Math.Round(Decimal.Divide(failedResultCount, results.Count) * 100, TRUST_SCORE_DECIMAL_PLACE_COUNT);
+        }
+
+        void OnRefreshClicked(object sender, System.EventArgs e)
+        {
+            ReportCheckResults(DependencyService.Get<ISecurityCheckProvider>().SecurityChecks);
         }
     }
 }
