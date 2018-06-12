@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using AeroGear.Mobile.Security;
 using Example.Security;
 using AeroGear.Mobile.Core.Utils;
+using Example.iOS.Resources;
+using SecurityChecksEnum = AeroGear.Mobile.Security.SecurityChecks;
 
 [assembly: Xamarin.Forms.Dependency(typeof(Example.iOS.Security.SecurityCheckProvider))]
 namespace Example.iOS.Security
@@ -24,27 +26,27 @@ namespace Example.iOS.Security
                 // Configure securitychecks list
                 securityChecks.Add(
                     new DeviceCheckSecurityDecorator(
-                        securityCheckFactory.create("DeviceLockCheck"),
-                        "Device Lock Enabled",
-                        "No Device Lock Enabled"
+                        securityCheckFactory.create(SecurityChecksEnum.DEVICE_LOCK),
+                        SecurityResources.device_lock_detected,
+                        SecurityResources.device_lock_not_detected
                     ));
                 securityChecks.Add(
                     new DeviceCheckSecurityDecorator(
-                        securityCheckFactory.create("NoDebuggerCheck"),
-                        "No Debugger Detected",
-                        "Debugger Detected"
+                        securityCheckFactory.create(SecurityChecksEnum.NO_DEBUGGER),
+                        SecurityResources.device_debugger_not_detected,
+                        SecurityResources.device_debugger_detected
                     ));
                 securityChecks.Add(
                     new DeviceCheckSecurityDecorator(
-                        securityCheckFactory.create("NonJailbrokenCheck"),
-                        "No Jailbreak Detected",
-                        "Jailbreak Detected"
+                        securityCheckFactory.create(SecurityChecksEnum.NOT_JAILBROKEN),
+                        SecurityResources.device_jailbreak_not_detected,
+                        SecurityResources.device_jailbreak_detected
                     ));
                 securityChecks.Add(
                     new DeviceCheckSecurityDecorator(
-                        securityCheckFactory.create("NotInEmulatorCheck"),
-                        "No Emulator Access Detected",
-                        "Emulator Access Detected"
+                        securityCheckFactory.create(SecurityChecksEnum.NOT_IN_EMULATOR),
+                        SecurityResources.device_emulator_not_detected,
+                        SecurityResources.device_emulator_detected
                     ));
 
                 return securityChecks;

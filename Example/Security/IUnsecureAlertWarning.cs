@@ -3,6 +3,6 @@ namespace Example.Security
 {
     public interface IUnsecureAlertWarning
     {
-        void Show();
+        void Show(int currentValue, int threshold);
     }
 }

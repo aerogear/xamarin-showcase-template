@@ -61,7 +61,7 @@ namespace Example.Views.Pages
         private void ShowDeviceInsecureAlert()
         {
             var unsecureWarning = DependencyService.Get<IUnsecureAlertWarning>();
-            unsecureWarning.Show();
+            unsecureWarning.Show(Convert.ToInt32(this.trustScore), SCORE_THRESHOLD);
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

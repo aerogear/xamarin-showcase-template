@@ -93,6 +93,9 @@
     <Compile Include="Auth\AuthenticateOptionsProvider.cs" />
     <Compile Include="Security\SecurityCheckProvider.cs" />
     <Compile Include="Security\UnsecureAlertWarning.cs" />
+    <Compile Include="Resources\SecurityResources.Designer.cs">
+      <DependentUpon>SecurityResources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -136,6 +139,12 @@
   <ItemGroup />
   <ItemGroup>
     <Folder Include="Security\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\SecurityResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SecurityResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

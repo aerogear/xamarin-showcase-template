@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>2.0</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    
+    <data name="device.lock.detected" xml:space="preserve">
+        <value>Device Lock Enabled</value>
+    </data>
+    <data name="device.lock.not.detected" xml:space="preserve">
+        <value>No Device Lock Enabled</value>
+    </data>
+
+    <data name="device.debugger.detected" xml:space="preserve">
+        <value>Debugger Detected</value>
+    </data>
+    <data name="device.debugger.not.detected" xml:space="preserve">
+        <value>No Debugger Detected</value>
+    </data>
+
+    <data name="device.jailbreak.detected" xml:space="preserve">
+        <value>Jailbreak Detected</value>
+    </data>
+    <data name="device.jailbreak.not.detected" xml:space="preserve">
+        <value>No Jailbreak Detected</value>
+    </data>
+
+    <data name="device.emulator.detected" xml:space="preserve">
+        <value>Emulator Access Detected</value>
+    </data>
+    <data name="device.emulator.not.detected" xml:space="preserve">
+        <value>No Emulator Access Detected</value>
+    </data>
+</root>
