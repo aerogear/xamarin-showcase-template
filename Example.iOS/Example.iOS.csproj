@@ -144,7 +144,7 @@
       <Project>{30C55998-0E1C-4AE9-A8A9-58815C2D5048}</Project>
       <Name>Example</Name>
     </ProjectReference>
-</ItemGroup>
+  </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
       <Visible>false</Visible>
@@ -175,6 +175,12 @@
     </PackageReference>
     <PackageReference Include="SuaveControls.FloatingActionButton">
       <Version>2018.1.5</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.FFImageLoading.Svg.Forms">
+      <Version>2.4.3.840</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.FFImageLoading.Forms">
+      <Version>2.4.3.840</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms">
       <Version>3.0.0.561731</Version>

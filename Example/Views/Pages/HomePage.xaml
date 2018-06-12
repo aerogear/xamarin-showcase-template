@@ -3,8 +3,14 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Example.Views.Pages.HomePage"
-             Title="Home">
-  <StackLayout Padding="10">
-    <Label Text="Home!!!" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="{DynamicResource PrimaryTextColor}"/>
-  </StackLayout>
+             xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             xmlns:s="clr-namespace:Example.Utils;assembly=Example"
+             xmlns:htmlLabel="clr-namespace:Plugin.HtmlLabel;assembly=Plugin.HtmlLabel"
+             Title="Detail">
+  <StackLayout Padding="48">
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <ffimageloadingsvg:SvgCachedImage Source="resource://Example.Resources.aerogear_logo.svg" HorizontalOptions="Center" />
+            <htmlLabel:HtmlLabel Text="{s:StringResource HomeWelcome}" FontSize="Medium" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" TextColor="{DynamicResource MediumGrayTextColor}" Margin="0,48,0,0" XAlign="Center" />
+        </StackLayout>
+    </StackLayout>
 </ContentPage>

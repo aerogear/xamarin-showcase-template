@@ -4,12 +4,13 @@ using AeroGear.Mobile.Auth.Config;
 using AeroGear.Mobile.Core;
 using AeroGear.Mobile.Core.Configuration;
 using AeroGear.Mobile.Security;
-using FFImageLoading.Forms.Touch;
 using Foundation;
 using ImageCircle.Forms.Plugin.iOS;
 using SuaveControls.FloatingActionButton.iOS.Renderers;
+using Plugin.HtmlLabel.iOS;
 using UIKit;
 using static AeroGear.Mobile.Core.Configuration.ServiceConfiguration;
+using FFImageLoading.Forms.Platform;
 
 namespace Example.iOS
 {
@@ -29,16 +30,18 @@ namespace Example.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+            CachedImageRenderer.Init();
+
             var xamApp = new App();
             MobileCore core = MobileCoreIOS.Init(xamApp.GetType().Assembly);
             var authService = AuthService.InitializeService();
             SecurityService.InitializeService();
             var authConfig = AuthenticationConfig.Builder.RedirectUri("org.aerogear.mobile.example:/callback").Build();
             authService.Configure(authConfig);
-            LoadApplication(xamApp);
             FloatingActionButtonRenderer.InitRenderer();
-            CachedImageRenderer.Init();
             ImageCircleRenderer.Init();
+            HtmlLabelRenderer.Initialize();
+            LoadApplication(xamApp);
             return base.FinishedLaunching(app, options);
         }
     }
