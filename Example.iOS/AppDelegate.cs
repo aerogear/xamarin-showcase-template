@@ -7,6 +7,7 @@ using AeroGear.Mobile.Security;
 using FFImageLoading.Forms.Touch;
 using Foundation;
 using ImageCircle.Forms.Plugin.iOS;
+using SuaveControls.FloatingActionButton.iOS.Renderers;
 using UIKit;
 using static AeroGear.Mobile.Core.Configuration.ServiceConfiguration;
 
@@ -35,6 +36,7 @@ namespace Example.iOS
             var authConfig = AuthenticationConfig.Builder.RedirectUri("org.aerogear.mobile.example:/callback").Build();
             authService.Configure(authConfig);
             LoadApplication(xamApp);
+            FloatingActionButtonRenderer.InitRenderer();
             CachedImageRenderer.Init();
             ImageCircleRenderer.Init();
             return base.FinishedLaunching(app, options);

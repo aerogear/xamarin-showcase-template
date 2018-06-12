@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>2.0</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+
+    <!--Unsecure warning alert-->
+    <data name="warning.unsecure.title" xml:space="preserve">
+        <value>Warning</value>
+    </data>
+
+    <data name="warning.unsecure.message" xml:space="preserve">
+        <value>Your current device trust score {0}% is below the specified target of {1}%, do you want to continue or exit the app?</value>
+        <comment>This message is visualized when the computed trustscore is below the configured threshold</comment>
+    </data>
+
+    <data name="button.exit" xml:space="preserve">
+        <value>EXIT</value>
+    </data>
+    <data name="button.continue" xml:space="preserve">
+        <value>CONTINUE</value>
+    </data>
+
+</root>
