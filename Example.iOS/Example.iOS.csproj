@@ -139,7 +139,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Example\Example.csproj">
-      <Project>{F0217CFC-1E56-4703-AECE-EE4196A59B17}</Project>
+      <Project>{30C55998-0E1C-4AE9-A8A9-58815C2D5048}</Project>
       <Name>Example</Name>
     </ProjectReference>
 </ItemGroup>
@@ -150,9 +150,6 @@
   </ItemGroup>
   <ItemGroup>
     
-    <PackageReference Include="Xamarin.Forms">
-      <Version>2.5.1.527436</Version>
-    </PackageReference>
     <PackageReference Include="JWT">
       <Version>4.0.0</Version>
     </PackageReference>
