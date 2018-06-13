@@ -173,9 +173,6 @@
     <PackageReference Include="AeroGear.Mobile.Core.Platform.iOS">
       <Version>1.0.0-alpha</Version>
     </PackageReference>
-    <PackageReference Include="SuaveControls.FloatingActionButton">
-      <Version>2018.1.5</Version>
-    </PackageReference>
     <PackageReference Include="Xamarin.FFImageLoading.Svg.Forms">
       <Version>2.4.3.840</Version>
     </PackageReference>

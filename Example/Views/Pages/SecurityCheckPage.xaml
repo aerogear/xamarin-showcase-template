@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- this page is displayed on start as first page -->
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             xmlns:controls="clr-namespace:SuaveControls.Views;assembly=SuaveControls.FloatingActionButton"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Example.Views.Pages.SecurityCheckPage" 
              Title="Device Trust" 
              BackgroundColor="White">
 
     <ContentPage.Resources>
         <ResourceDictionary>
-            <OnPlatform x:Key="FAB.layoutBounds" x:TypeArguments="Rectangle">
-                <On Platform="iOS">0.9,0.9,-1,-1</On>
-                <On Platform="Android">1,1,-1,-1</On>
-            </OnPlatform>
             <OnPlatform x:Key="FAB.buttonColor" x:TypeArguments="Color">
                 <On Platform="iOS">#E55332</On>
                 <On Platform="Android">#E55332</On>
@@ -20,16 +15,17 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     
-    <StackLayout VerticalOptions="StartAndExpand">
+    <StackLayout VerticalOptions="FillAndExpand">
         <StackLayout BackgroundColor="{DynamicResource Primary}" HeightRequest="100">
             <StackLayout VerticalOptions="CenterAndExpand">
                 <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="{Binding TrustScore, StringFormat='{0}%'}" FontSize="Large" HorizontalOptions="Fill" TextColor="White" />
                 <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="Device Trust Score" FontSize="Small" HorizontalOptions="Fill" TextColor="White" />
-<!--                <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="{Binding CheckResults.Count, StringFormat='({0} Checks)'}" FontSize="Micro" HorizontalOptions="Fill" TextColor="White" />-->
                 <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="{Binding ResultMessage}" FontSize="Micro" HorizontalOptions="Fill" TextColor="White" />
             </StackLayout>
         </StackLayout>
-        <AbsoluteLayout x:Name="AbsoluteLayoutWidgets" Grid.Row="4" Padding="0">            
+        <AbsoluteLayout x:Name="AbsoluteLayoutWidgets" Padding="0"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand">
             <ListView x:Name="checkList" ItemsSource="{Binding CheckResults}"
                       AbsoluteLayout.LayoutFlags="All"
                       AbsoluteLayout.LayoutBounds="0,0,1,1">
@@ -44,17 +40,21 @@
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
+                <ListView.Footer>
+                    <Label />
+                </ListView.Footer>
             </ListView>
 
-            <controls:FloatingActionButton 
-                x:Name="FAB" HorizontalOptions="Center" 
-                VerticalOptions="CenterAndExpand" 
-                Image="ic_refresh"
-                AbsoluteLayout.LayoutFlags="PositionProportional"
-                AbsoluteLayout.LayoutBounds="{StaticResource FAB.layoutBounds}"
-                ButtonColor="{StaticResource FAB.buttonColor}"
-                Clicked="OnRefreshClicked"
-                />
+            <Button WidthRequest="60" HeightRequest="60" BorderRadius="30"
+                    HorizontalOptions="Center" 
+                    VerticalOptions="CenterAndExpand" 
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+                    AbsoluteLayout.LayoutBounds="1,1,-1,-1"
+                    BackgroundColor="{StaticResource FAB.buttonColor}"
+                    Image="ic_refresh"
+                    Margin="20,20,20,20"
+                    Clicked="OnRefreshClicked"
+                    />
         </AbsoluteLayout>
     </StackLayout>
 </ContentPage>
