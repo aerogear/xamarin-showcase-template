@@ -3,7 +3,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:controls="clr-namespace:SuaveControls.Views;assembly=SuaveControls.FloatingActionButton"
-             x:Class="Example.Views.Pages.SecurityCheckPage" Title="Detail" BackgroundColor="White">
+             x:Class="Example.Views.Pages.SecurityCheckPage" 
+             Title="Device Trust" 
+             BackgroundColor="White">
 
     <ContentPage.Resources>
         <ResourceDictionary>

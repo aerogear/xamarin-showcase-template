@@ -4,7 +4,9 @@
              xmlns:controls="clr-namespace:TwinTechsForms.NControl;assembly=TwinTechsForms.NControl.SvgImageView"
              xmlns:utils="clr-namespace:Example.Utils"
              xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
-             x:Class="Example.Views.Pages.AuthPage">
+             x:Class="Example.Views.Pages.AuthPage"
+             Title="Authentication"
+>
     <ContentPage.Content>
         <AbsoluteLayout Padding="20,0,20,0">
             <Image Source="ag_background.png" 
