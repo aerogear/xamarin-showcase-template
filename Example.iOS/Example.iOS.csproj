@@ -113,6 +113,7 @@
     <BundleResource Include="Resources\ic_warning.png" />
     <BundleResource Include="Resources\ic_refresh.png" />
     <BundleResource Include="Resources\ic_openid.png" />
+    <BundleResource Include="Resources\ag_background.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
