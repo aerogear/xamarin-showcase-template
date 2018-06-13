@@ -20,6 +20,10 @@ namespace Example.Views.Pages
         private ObservableCollection<SecurityCheckResultDecorator> securityCheckResults = new ObservableCollection<SecurityCheckResultDecorator>();
         private decimal trustScore = TRUST_SCORE_INITIAL_PERCENTAGE;
 
+        private int passedChecksCount = 0;
+        private int totalChecksCount = 0;
+
+        public string ResultMessage => String.Format("({0} out of {1} checks passing)", passedChecksCount, totalChecksCount);
 
         public ObservableCollection<SecurityCheckResultDecorator> CheckResults
         {
@@ -51,6 +55,7 @@ namespace Example.Views.Pages
 
             this.trustScore = CalculateTrustScore(new List<SecurityCheckResultDecorator>(securityCheckResults));
             NotifyPropertyChanged(nameof(TrustScore));
+            NotifyPropertyChanged(nameof(ResultMessage));
 
             if (this.trustScore < SCORE_THRESHOLD)
             {
@@ -72,7 +77,10 @@ namespace Example.Views.Pages
 
         private decimal CalculateTrustScore(List<SecurityCheckResultDecorator> results)
         {
+            totalChecksCount = results.Count;
             int failedResultCount = results.FindAll(result => !result.IsSecure).Count;
+            passedChecksCount = totalChecksCount - failedResultCount;
+
             return 100 - Math.Round(Decimal.Divide(failedResultCount, results.Count) * 100, TRUST_SCORE_DECIMAL_PLACE_COUNT);
         }
 

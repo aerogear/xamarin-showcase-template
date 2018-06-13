@@ -25,7 +25,8 @@
             <StackLayout VerticalOptions="CenterAndExpand">
                 <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="{Binding TrustScore, StringFormat='{0}%'}" FontSize="Large" HorizontalOptions="Fill" TextColor="White" />
                 <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="Device Trust Score" FontSize="Small" HorizontalOptions="Fill" TextColor="White" />
-                <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="{Binding CheckResults.Count, StringFormat='({0} Checks)'}" FontSize="Micro" HorizontalOptions="Fill" TextColor="White" />
+<!--                <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="{Binding CheckResults.Count, StringFormat='({0} Checks)'}" FontSize="Micro" HorizontalOptions="Fill" TextColor="White" />-->
+                <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="{Binding ResultMessage}" FontSize="Micro" HorizontalOptions="Fill" TextColor="White" />
             </StackLayout>
         </StackLayout>
         <AbsoluteLayout x:Name="AbsoluteLayoutWidgets" Grid.Row="4" Padding="0">            
