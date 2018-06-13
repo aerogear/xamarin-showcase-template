@@ -9,18 +9,18 @@
         <AbsoluteLayout Padding="20,0,20,0">
             <Image Source="ag_background.png" 
                 AbsoluteLayout.LayoutFlags="PositionProportional"
-                AbsoluteLayout.LayoutBounds="0.5,0.5,1920,1080"/>
+                AbsoluteLayout.LayoutBounds="0.5,0,1920,1080"/>
 
             <Image Source="ic_openid.png" 
                    AbsoluteLayout.LayoutFlags="PositionProportional"
-                   AbsoluteLayout.LayoutBounds="0.5,0.5"/>
+                   AbsoluteLayout.LayoutBounds="0.5,0.45"/>
 
             <Button Text="Authenticate" x:Name="authButton"
                     BackgroundColor="{DynamicResource Primary}"
                     TextColor="{DynamicResource InversePrimaryTextColor}"
                     Clicked="OnAuthenticateClicked"
                     AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
-                    AbsoluteLayout.LayoutBounds="0,0.66,1,40"
+                    AbsoluteLayout.LayoutBounds="0,0.80,1,50"
                 />
         </AbsoluteLayout>
     </ContentPage.Content>
