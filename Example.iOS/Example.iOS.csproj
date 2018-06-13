@@ -112,6 +112,7 @@
     <BundleResource Include="Resources\ic_passed.png" />
     <BundleResource Include="Resources\ic_warning.png" />
     <BundleResource Include="Resources\ic_refresh.png" />
+    <BundleResource Include="Resources\ic_openid.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
