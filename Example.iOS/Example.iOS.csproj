@@ -112,6 +112,8 @@
     <BundleResource Include="Resources\ic_passed.png" />
     <BundleResource Include="Resources\ic_warning.png" />
     <BundleResource Include="Resources\ic_refresh.png" />
+    <BundleResource Include="Resources\ic_openid.png" />
+    <BundleResource Include="Resources\ag_background.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -139,7 +141,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Example\Example.csproj">
-      <Project>{F0217CFC-1E56-4703-AECE-EE4196A59B17}</Project>
+      <Project>{30C55998-0E1C-4AE9-A8A9-58815C2D5048}</Project>
       <Name>Example</Name>
     </ProjectReference>
 </ItemGroup>

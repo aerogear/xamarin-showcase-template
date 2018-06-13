@@ -127,7 +127,7 @@
     <value>Security</value>
   </data>
   <data name="NavAuth" xml:space="preserve">
-    <value>Auth</value>
+    <value>Authentication</value>
   </data>
   <data name="Home" xml:space="preserve">
     <value>Home!!!</value>

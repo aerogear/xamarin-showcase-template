@@ -34,8 +34,6 @@ namespace Example.Views
 
             var page = (Page)Activator.CreateInstance(item.TargetType);
 
-            page.Title = StringResources.AppName;
-
             Detail = new NavigationPage(page);
             IsPresented = false;
             item.Selected = true;
