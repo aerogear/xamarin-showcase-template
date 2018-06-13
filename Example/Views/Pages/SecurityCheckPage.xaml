@@ -14,7 +14,7 @@
                 <On Platform="Android">1,1,-1,-1</On>
             </OnPlatform>
             <OnPlatform x:Key="FAB.buttonColor" x:TypeArguments="Color">
-                <On Platform="iOS">#B5BAC1</On>
+                <On Platform="iOS">#E55332</On>
                 <On Platform="Android">#E55332</On>
             </OnPlatform>
         </ResourceDictionary>
