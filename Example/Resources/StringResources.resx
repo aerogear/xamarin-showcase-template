@@ -129,8 +129,10 @@
   <data name="NavAuth" xml:space="preserve">
     <value>Authentication</value>
   </data>
-  <data name="Home" xml:space="preserve">
-    <value>Home!!!</value>
+  <data name="HomeWelcome" xml:space="preserve">
+    <value>This app demonstrates how to use the AeroGear Mobile services, backed by OpenShift to perform a wide range of common mobile tasks such as Identity Management, Device Security, Metrics Capture, Push Notifications and more.
+&lt;br&gt;&lt;br&gt;
+For further information, visit &lt;a href="http://www.aerogear.org"&gt;www.aerogear.org&lt;/a&gt;</value>
   </data>
   <data name="Menu" xml:space="preserve">
     <value>Menu</value>

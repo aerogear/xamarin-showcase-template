@@ -9,15 +9,16 @@
     
     <PackageReference Include="ListDiff" Version="1.0.7" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
-  <PackageReference Include="AeroGear.Mobile.Core" Version="1.0.0-alpha" />
-   <PackageReference Include="AeroGear.Mobile.Auth" Version="1.0.0-alpha" />
-    <PackageReference Include="AeroGear.Mobile.Security" Version="1.0.0-alpha" />
     <PackageReference Include="SuaveControls.FloatingActionButton" Version="2018.1.5" />
-    <PackageReference Include="Xamarin.Forms" Version="3.0.0.561731" />
+    <PackageReference Include="Xam.Plugin.HtmlLabel" Version="2.2.0" />
+    <PackageReference Include="AeroGear.Mobile.Core" Version="1.0.0-alpha" />
+    <PackageReference Include="AeroGear.Mobile.Auth" Version="1.0.0-alpha" />
+    <PackageReference Include="AeroGear.Mobile.Security" Version="1.0.0-alpha" />
     <PackageReference Include="Xamarin.FFImageLoading.Svg.Forms" Version="2.4.3.840" />
     <PackageReference Include="Xamarin.FFImageLoading.Transformations" Version="2.4.3.840" />
     <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.3.840" />
     <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="3.0.0.5" />
+    <PackageReference Include="Xamarin.Forms" Version="3.0.0.561731" />
   </ItemGroup>
 
   <ItemGroup>
@@ -25,13 +26,13 @@
     <Compile Remove="Views\Pages\HomePage.xaml %28copy%29.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Views\RootPageMenuItem.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="Resources\StringResources.Designer.cs">
-      <DependentUpon>StringResources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
+      <DependentUpon>StringResources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Views\RootPageMenuItem.cs">
+      <SubType>Code</SubType>
     </Compile>
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Views\Pages\HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
@@ -64,6 +65,7 @@
     <EmbeddedResource Remove="Views\Pages\HomePage %28copy%29.xaml" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Resources\aerogear_logo.svg" />
     <EmbeddedResource Include="Resources\ic_auth.svg" />
     <EmbeddedResource Include="Resources\ic_home.svg" />
     <EmbeddedResource Include="Resources\ic_label.svg" />
@@ -75,15 +77,15 @@
     <EmbeddedResource Include="Resources\mobile-services.json" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Update="Resources\StringResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>StringResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\Pages\ListViewPage1.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\RootPageMaster.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="StringResources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>StringResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="Resources\StringResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
@@ -96,12 +98,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Utils\" />
     <Folder Include="Auth\" />
     <Folder Include="Security\" />
     <Folder Include="ViewModels\Security\" />
   </ItemGroup>
   <ItemGroup>
+    <None Remove="Resources\aerogear_logo.svg" />
     <None Remove="Resources\ic_auth.svg" />
     <None Remove="Resources\ic_home.svg" />
     <None Remove="Resources\ic_label.svg" />

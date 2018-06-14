@@ -71,9 +71,9 @@ namespace Example.Resources {
             }
         }
         
-        public static string Home {
+        public static string HomeWelcome {
             get {
-                return ResourceManager.GetString("Home", resourceCulture);
+                return ResourceManager.GetString("HomeWelcome", resourceCulture);
             }
         }
         
