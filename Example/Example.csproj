@@ -83,6 +83,9 @@
     <EmbeddedResource Include="Resources\ag_background.png" />
     <EmbeddedResource Include="Resources\ic_security.svg" />
     <EmbeddedResource Include="Resources\mobile-services.json" />
+    <EmbeddedResource Include="Resources\person.svg" />
+    <EmbeddedResource Include="Resources\ic_done.svg" />
+    <EmbeddedResource Include="Resources\ic_close.svg" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="Resources\StringResources.resx">
@@ -125,5 +128,8 @@
     <None Remove="Resources\ic_openid_connect.png" />
     <None Remove="Resources\ic_security.svg" />
     <None Remove="Resources\mobile-services.json" />
+    <None Remove="Resources\person.svg" />
+    <None Remove="Resources\ic_done.svg" />
+    <None Remove="Resources\ic_close.svg" />
   </ItemGroup>
 </Project>
