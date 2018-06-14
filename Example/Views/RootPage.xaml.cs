@@ -33,7 +33,7 @@ namespace Example.Views
                 return;
 
             var page = (Page)Activator.CreateInstance(item.TargetType);
-
+            if (String.IsNullOrEmpty(page.Title)) page.Title = item.PageTitle;
             Detail = new NavigationPage(page);
             IsPresented = false;
             item.Selected = true;

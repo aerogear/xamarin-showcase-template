@@ -8,6 +8,12 @@ using Xamarin.Forms.Xaml;
 
 namespace Example.Utils
 {
+
+    [ContentProperty("Title")]
+    class TitleStringResource:StringResource {
+        
+    }
+
     [ContentProperty("Text")]
     class StringResource:IMarkupExtension
     {
