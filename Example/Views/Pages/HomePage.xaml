@@ -6,7 +6,7 @@
              xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
              xmlns:s="clr-namespace:Example.Utils;assembly=Example"
              xmlns:htmlLabel="clr-namespace:Plugin.HtmlLabel;assembly=Plugin.HtmlLabel"
-             Title="Detail">
+             Title="Home">
   <StackLayout Padding="48">
         <StackLayout VerticalOptions="CenterAndExpand">
             <ffimageloadingsvg:SvgCachedImage Source="resource://Example.Resources.aerogear_logo.svg" HorizontalOptions="Center" />

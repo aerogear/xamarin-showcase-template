@@ -76,9 +76,6 @@
     <PackageReference Include="AeroGear.Mobile.Security.Platform.Android">
       <Version>1.0.0-alpha</Version>
     </PackageReference>
-    <PackageReference Include="SuaveControls.FloatingActionButton">
-      <Version>2018.1.5</Version>
-    </PackageReference>
     <PackageReference Include="System.Json">
       <Version>4.5.0</Version>
     </PackageReference>

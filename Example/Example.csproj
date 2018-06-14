@@ -9,7 +9,6 @@
     
     <PackageReference Include="ListDiff" Version="1.0.7" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
-    <PackageReference Include="SuaveControls.FloatingActionButton" Version="2018.1.5" />
     <PackageReference Include="Xam.Plugin.HtmlLabel" Version="2.2.0" />
     <PackageReference Include="AeroGear.Mobile.Core" Version="1.0.0-alpha" />
     <PackageReference Include="AeroGear.Mobile.Auth" Version="1.0.0-alpha" />
@@ -98,6 +97,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Utils\" />
     <Folder Include="Auth\" />
     <Folder Include="Security\" />
     <Folder Include="ViewModels\Security\" />
