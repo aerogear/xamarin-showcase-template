@@ -23,6 +23,7 @@ namespace Example.Models
             var item = new NavigationItem();
             item.Id = 0;
             item.Title = StringResources.NavHome;
+            item.PageTitle = StringResources.AppName;
             item.Icon = ResourceUtils.GetSvg("ic_home");
             item.Selected = true;
             return item;
@@ -35,41 +36,47 @@ namespace Example.Models
         }
         public int Id { get; set; }
         public string Title { get; set; }
-        public string Icon { get; set; }
-        public bool Selected
-        {
-            get => selected;
-            set
-            {
-                if (selected != value)
-                {
-                    selected = value;
-                    OnPropertyChanged("Selected");
-                }
-				OnPropertyChanged("SelectedColor");
-            }
-        }
-        private bool selected;
-
-        public Type TargetType { get; set; }
-
-        public Color SelectedColor
+        public string PageTitle
         {
             get
-            {
-                return (Color)Application.Current.Resources[selected ? "Accent" : "PrimaryTextColor"];
-            }
+=> _pageTitle != null ? _pageTitle : Title;
+            set => _pageTitle = value;
         }
-
-        #region INotifyPropertyChanged Implementation
-        public event PropertyChangedEventHandler PropertyChanged;
-        void OnPropertyChanged([CallerMemberName] string propertyName = "")
+        public string Icon { get; set; }
+public bool Selected
+{
+    get => selected;
+    set
+    {
+        if (selected != value)
         {
-            if (PropertyChanged == null)
-                return;
-
-            PropertyChanged.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            selected = value;
+            OnPropertyChanged("Selected");
         }
+        OnPropertyChanged("SelectedColor");
+    }
+}
+private bool selected;
+private string _pageTitle;
+public Type TargetType { get; set; }
+
+public Color SelectedColor
+{
+    get
+    {
+        return (Color)Application.Current.Resources[selected ? "Accent" : "PrimaryTextColor"];
+    }
+}
+
+#region INotifyPropertyChanged Implementation
+public event PropertyChangedEventHandler PropertyChanged;
+void OnPropertyChanged([CallerMemberName] string propertyName = "")
+{
+    if (PropertyChanged == null)
+        return;
+
+    PropertyChanged.Invoke(this, new PropertyChangedEventArgs(propertyName));
+}
         #endregion
 
     }

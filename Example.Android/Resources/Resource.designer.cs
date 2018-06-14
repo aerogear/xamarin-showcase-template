@@ -3755,6 +3755,9 @@ namespace Example.Android
 			// aapt resource value: 0x7f0a0027
 			public const int abc_toolbar_collapse_description = 2131361831;
 			
+			// aapt resource value: 0x7f0a003f
+			public const int app_name = 2131361855;
+			
 			// aapt resource value: 0x7f0a0036
 			public const int appbar_scrolling_view_behavior = 2131361846;
 			
@@ -3763,6 +3766,9 @@ namespace Example.Android
 			
 			// aapt resource value: 0x7f0a0038
 			public const int character_counter_pattern = 2131361848;
+			
+			// aapt resource value: 0x7f0a003e
+			public const int hello = 2131361854;
 			
 			// aapt resource value: 0x7f0a0000
 			public const int mr_button_content_description = 2131361792;
