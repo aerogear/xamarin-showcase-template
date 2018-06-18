@@ -37,10 +37,12 @@
 
                 <!--OTP 2FA Enabled-->
                 <Label Text="OTP 2FA Enabled" FontSize="Small" Grid.Column="0" Grid.Row="0" VerticalOptions="Center" />
+                <!--hard coded for now, need to fix this in the future once the info is available from the auth sdk-->
                 <utils:TintedSvgImage TintColor="Red" WidthRequest="32" HeightRequest="32" Source="resource://Example.Resources.ic_close.svg" Grid.Row="0" Grid.Column="1" />
 
                 <!--Email Verified-->
                 <Label Text="Email Verified" FontSize="Small" Grid.Column="0" Grid.Row="1" VerticalOptions="Center" />
+                <!--hard coded for now, need to fix this in the future once the info is available from the auth sdk-->
                 <utils:TintedSvgImage TintColor="Red" WidthRequest="32" HeightRequest="32" Source="resource://Example.Resources.ic_close.svg" Grid.Row="1" Grid.Column="1" />
             </Grid>
         </StackLayout>
@@ -64,8 +66,8 @@
         </StackLayout>
 
         <!--Logout-->
-        <StackLayout VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand">
-            <Button Text="Logout" BackgroundColor="{DynamicResource Primary}" TextColor="White" VerticalOptions="End" Clicked="onLogoutClicked" />
+        <StackLayout VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand" Padding="0,0,0,0" Spacing="0">
+            <Button Text="Logout" BackgroundColor="{DynamicResource Primary}" TextColor="White" VerticalOptions="End" Clicked="onLogoutClicked" BorderRadius="0"/>
         </StackLayout>
     </StackLayout>
 </ContentPage>
