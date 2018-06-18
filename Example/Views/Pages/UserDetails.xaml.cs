@@ -38,6 +38,8 @@ namespace Example.Views.Pages
         //    //email.Text = user.Email;
         //}
 
+        public User CurrentUser => user;
+
         public ICollection<UserRole> AssignedRoles 
         {
             get
@@ -52,14 +54,13 @@ namespace Example.Views.Pages
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-
         void onLogoutClicked(object sender, System.EventArgs e)
         {
-            //var authService = MobileCore.Instance.GetService<IAuthService>();
-            //authService.Logout(authService.CurrentUser()).ContinueWith(result =>
-            //{
-            //    Device.BeginInvokeOnMainThread(() => Navigation.PushAsync(new AuthPage()));
-            //});
+            var authService = MobileCore.Instance.GetService<IAuthService>();
+            authService.Logout(authService.CurrentUser()).ContinueWith(result =>
+            {
+                Device.BeginInvokeOnMainThread(() => Navigation.PushAsync(new AuthPage()));
+            });
         }
     }
 }
