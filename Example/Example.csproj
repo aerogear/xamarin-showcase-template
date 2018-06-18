@@ -30,6 +30,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>StringResources.resx</DependentUpon>
     </Compile>
+    <Compile Update="Views\Pages\WebPage.xaml.cs">
+      <DependentUpon>WebPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Pages\UnderConstruction.xaml.cs">
+      <DependentUpon>UnderConstruction.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\RootPageMenuItem.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -65,14 +71,17 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\aerogear_logo.svg" />
+    <EmbeddedResource Include="Resources\ic_account_circle.svg" />
     <EmbeddedResource Include="Resources\ic_auth.svg" />
     <EmbeddedResource Include="Resources\ic_home.svg" />
+    <EmbeddedResource Include="Resources\ic_insert_chart.svg" />
     <EmbeddedResource Include="Resources\ic_label.svg" />
-    <EmbeddedResource Include="Resources\ic_phonelink_lock.svg" />
+    <EmbeddedResource Include="Resources\ic_notifications_active.svg" />
     <EmbeddedResource Include="Resources\aerogear_icon.png" />
     <EmbeddedResource Include="Resources\ag_background.svg" />
     <EmbeddedResource Include="Resources\ic_openid.png" />
     <EmbeddedResource Include="Resources\ag_background.png" />
+    <EmbeddedResource Include="Resources\ic_security.svg" />
     <EmbeddedResource Include="Resources\mobile-services.json" />
   </ItemGroup>
   <ItemGroup>
@@ -104,14 +113,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="Resources\aerogear_logo.svg" />
+    <None Remove="Resources\ic_account_circle.svg" />
     <None Remove="Resources\ic_auth.svg" />
     <None Remove="Resources\ic_home.svg" />
+    <None Remove="Resources\ic_insert_chart.svg" />
     <None Remove="Resources\ic_label.svg" />
-    <None Remove="Resources\ic_phonelink_lock.svg" />
+    <None Remove="Resources\ic_notifications_active.svg" />
     <None Remove="Resources\aerogear_icon.png" />
     <None Remove="Resources\ag_background.png" />
     <None Remove="Resources\ag_background.svg" />
     <None Remove="Resources\ic_openid_connect.png" />
+    <None Remove="Resources\ic_security.svg" />
     <None Remove="Resources\mobile-services.json" />
   </ItemGroup>
 </Project>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- this page is displayed on start as first page -->
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Example.Views.Pages.UnderConstruction"
+             xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             xmlns:s="clr-namespace:Example.Utils;assembly=Example"
+             xmlns:htmlLabel="clr-namespace:Plugin.HtmlLabel;assembly=Plugin.HtmlLabel"
+             >
+  <StackLayout Padding="48">
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <ffimageloadingsvg:SvgCachedImage Source="resource://Example.Resources.aerogear_logo.svg" HorizontalOptions="Center" />
+            <Label Text="{s:StringResource UnderConstructionTitle}" FontSize="Large" FontAttributes="Bold" Margin="0,48,0,0" XAlign="Center" HorizontalOptions="Center" TextColor="{DynamicResource MediumGrayTextColor}" />
+            <htmlLabel:HtmlLabel Text="{s:StringResource UnderConstruction}" FontSize="Medium" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" TextColor="{DynamicResource MediumGrayTextColor}" Margin="0,16,0,0" XAlign="Center" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
