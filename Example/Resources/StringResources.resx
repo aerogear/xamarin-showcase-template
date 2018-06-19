@@ -132,12 +132,61 @@
   <data name="HomeWelcome" xml:space="preserve">
     <value>This app demonstrates how to use the AeroGear Mobile services, backed by OpenShift to perform a wide range of common mobile tasks such as Identity Management, Device Security, Metrics Capture, Push Notifications and more.
 &lt;br&gt;&lt;br&gt;
-For further information, visit &lt;a href="http://www.aerogear.org"&gt;www.aerogear.org&lt;/a&gt;</value>
+For further information, visit &lt;span style="color: #2e6980"&gt;&lt;a href="http://www.aerogear.org" &gt;www.aerogear.org&lt;/a&gt;&lt;/span&gt;</value>
   </data>
   <data name="Menu" xml:space="preserve">
     <value>Menu</value>
   </data>
   <data name="AeroGear" xml:space="preserve">
     <value>AeroGear</value>
+  </data>
+  <data name="NavCertPinning" xml:space="preserve">
+    <value>Cert. Pinning</value>
+  </data>
+  <data name="NavDeviceProfileInfo" xml:space="preserve">
+    <value>Device Profile Info</value>
+  </data>
+  <data name="NavDeviceTrust" xml:space="preserve">
+    <value>Device Trust</value>
+  </data>
+  <data name="NavDevReg" xml:space="preserve">
+    <value>Device Registration</value>
+  </data>
+  <data name="NavDocumentation" xml:space="preserve">
+    <value>Documentation</value>
+  </data>
+  <data name="NavIdtMgmt" xml:space="preserve">
+    <value>Identity Management</value>
+  </data>
+  <data name="NavMetrics" xml:space="preserve">
+    <value>Metrics</value>
+  </data>
+  <data name="NavPush" xml:space="preserve">
+    <value>Push Notifications</value>
+  </data>
+  <data name="NavPushMsg" xml:space="preserve">
+    <value>Push Messages</value>
+  </data>
+  <data name="NavSecStorage" xml:space="preserve">
+    <value>Secure Storage</value>
+  </data>
+  <data name="NavTrustCheckInfo" xml:space="preserve">
+    <value>Trust Check Info</value>
+  </data>
+  <data name="NavDevSec" xml:space="preserve">
+    <value>Device Security</value>
+  </data>
+  <data name="UnderConstruction" xml:space="preserve">
+    <value>This feature is currently under construction for this platform.
+&lt;br&gt;&lt;br&gt;
+If you would like to get involved in this work, please check out our community contribution page.&lt;br&gt;&lt;span style="color: #2e6980"&gt;
+ &lt;a href="http://www.aerogear.org/community#guides"&gt;www.aerogear.org/community#guides&lt;/a&gt;&lt;/span&gt;
+</value>
+  </data>
+  <data name="NavSSO" xml:space="preserve">
+    <value>SSO</value>
+  </data>
+  <data name="UnderConstructionTitle" xml:space="preserve">
+    <value>Under Construction</value>
   </data>
 </root>

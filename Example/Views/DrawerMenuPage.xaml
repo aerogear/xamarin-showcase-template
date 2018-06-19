@@ -16,7 +16,7 @@
                             </Grid.ColumnDefinitions>
                             <utils:TintedSvgImage TintColor="{Binding SelectedColor}" WidthRequest="24" HeightRequest="24" HorizontalOptions="Center" VerticalOptions="Center" Source="{Binding Icon}">
                             </utils:TintedSvgImage>
-                            <Label Grid.Column="2" VerticalOptions="Fill" VerticalTextAlignment="Center" FontAttributes="Bold" Text="{Binding Title}" FontSize="14" TextColor="{Binding SelectedColor}" />
+                            <Label Grid.Column="2" VerticalOptions="Fill" VerticalTextAlignment="Center" FontAttributes="{Binding FontAttributes}" Text="{Binding Title}" FontSize="14" TextColor="{Binding SelectedColor}" />
                         </Grid>
                     </ViewCell>
                 </DataTemplate>

@@ -20,7 +20,15 @@ namespace Example.Views
         public RootPage()
         {
             InitializeComponent();
-            DrawerMenuPage.ListView.ItemSelected += ListView_ItemSelected;
+            DrawerMenuPage.ListView.ItemTapped += (object sender, ItemTappedEventArgs e) =>
+            {
+                if (e.Item != null)
+                {
+                    var item = e.Item as NavigationItem;
+                    if (!item.Selectable) DrawerMenuPage.ListView.SelectedItem = null;
+                }
+            };
+           DrawerMenuPage.ListView.ItemSelected += ListView_ItemSelected;
             DrawerMenuPage.ListView.SelectedItem=NavigationItem.HOME_PAGE;
         }
 
@@ -29,7 +37,7 @@ namespace Example.Views
         /// </summary>
         /// <param name="item">menu item</param>
         private void ChangePage(NavigationItem item) {
-            if (item == null || item==oldSelectedItem)
+            if (item == null || !item.Selectable || item==oldSelectedItem)
                 return;
 
             var page = (Page)Activator.CreateInstance(item.TargetType);
