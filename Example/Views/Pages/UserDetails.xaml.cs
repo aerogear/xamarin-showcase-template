@@ -17,26 +17,9 @@ namespace Example.Views.Pages
         {
             this.user = MobileCore.Instance.GetService<IAuthService>().CurrentUser();
             userRoles = new ObservableCollection<UserRole>(this.user.Roles);
-            //NotifyPropertyChanged(nameof(AssignedRoles));
             InitializeComponent();
             BindingContext = this;
-            //NotifyPropertyChanged(nameof(AssignedRoles));
-            //InitListView();
         }
-
-        //private void InitListView()
-        //{
-        //    var user = MobileCore.Instance.GetService<IAuthService>().CurrentUser();
-        //    var roleItems = new List<string> { };
-        //    foreach (var role in user.getRoles())
-        //    {
-        //        roleItems.Add(role.ToString());
-        //    }
-
-        //    lstRoles.ItemsSource = roleItems;
-        //    //username.Text = user.Username;
-        //    //email.Text = user.Email;
-        //}
 
         public User CurrentUser => user;
 
