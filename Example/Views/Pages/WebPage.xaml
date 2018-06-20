@@ -5,9 +5,10 @@
              x:Class="Example.Views.Pages.WebPage"
              xmlns:s="clr-namespace:Example.Utils;assembly=Example"
              >
-  <StackLayout Padding="48">
-        <WebView VerticalOptions="CenterAndExpand" x:Name="PageWebView" >
-            
+  <StackLayout Padding="0,0,0,0">
+        <WebView VerticalOptions="FillAndExpand"  
+                 HorizontalOptions="FillAndExpand"
+                 x:Name="PageWebView" >            
         </WebView>
     </StackLayout>
 </ContentPage>

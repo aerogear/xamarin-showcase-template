@@ -181,7 +181,7 @@ For further information, visit &lt;span style="color: #2e6980"&gt;&lt;a href="ht
 &lt;br&gt;&lt;br&gt;
 If you would like to get involved in this work, please check out our community contribution page.&lt;br&gt;&lt;span style="color: #2e6980"&gt;
  &lt;a href="http://www.aerogear.org/community#guides"&gt;www.aerogear.org/community#guides&lt;/a&gt;&lt;/span&gt;
-</value>
+    </value>
   </data>
   <data name="NavSSO" xml:space="preserve">
     <value>SSO</value>
@@ -189,8 +189,29 @@ If you would like to get involved in this work, please check out our community c
   <data name="UnderConstructionTitle" xml:space="preserve">
     <value>Under Construction</value>
   </data>
-  <!--  Auth Resources-->
 
+  <!--  Documentation links-->
+  <data name="idm.doc.link" xml:space="preserve">
+    <value>https://docs.aerogear.org/aerogear/latest/keycloak/index.html</value>
+  </data>
+
+  <data name="idm.sso.doc.link" xml:space="preserve">
+    <value>https://docs.aerogear.org/aerogear/latest/keycloak/index.html?sso=1</value>
+  </data>
+
+  <data name="device.security.doc.link" xml:space="preserve">
+    <value>https://docs.aerogear.org/aerogear/latest/security/index.html</value>
+  </data>
+
+  <data name="push.doc.link" xml:space="preserve">
+    <value>https://docs.aerogear.org/aerogear/latest/push/index.html</value>
+  </data>
+
+  <data name="metrics.doc.link" xml:space="preserve">
+    <value>https://docs.aerogear.org/aerogear/latest/metrics/index.html</value>
+  </data>
+    
+  <!--  Auth Resources-->
   <data name="auth.Login" xml:space="preserve">
     <value>Authenticate</value>
   </data>

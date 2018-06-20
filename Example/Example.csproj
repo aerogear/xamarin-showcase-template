@@ -22,6 +22,7 @@
   <ItemGroup>
     <Compile Remove="Views\Pages\AuthPage.cs" />
     <Compile Remove="Views\Pages\HomePage.xaml %28copy%29.cs" />
+    <Compile Remove="Views\Pages\WebViewPage.xaml.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Resources\StringResources.Designer.cs">
