@@ -10,14 +10,13 @@
     <PackageReference Include="ListDiff" Version="1.0.7" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
     <PackageReference Include="Xam.Plugin.HtmlLabel" Version="2.2.0" />
-    <PackageReference Include="AeroGear.Mobile.Core" Version="1.0.0-alpha" />
-    <PackageReference Include="AeroGear.Mobile.Auth" Version="1.0.0-alpha" />
-    <PackageReference Include="AeroGear.Mobile.Security" Version="1.0.0-alpha" />
     <PackageReference Include="Xamarin.FFImageLoading.Svg.Forms" Version="2.4.3.840" />
     <PackageReference Include="Xamarin.FFImageLoading.Transformations" Version="2.4.3.840" />
     <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.3.840" />
     <PackageReference Include="Xamarin.Forms" Version="2.5.1.527436" />
     <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="2.0.2" />
+    <PackageReference Include="AeroGear.Mobile.Auth" Version="1.0.0-alpha-1" />
+    <PackageReference Include="AeroGear.Mobile.Security" Version="1.0.0-alpha-1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -83,6 +82,9 @@
     <EmbeddedResource Include="Resources\ag_background.png" />
     <EmbeddedResource Include="Resources\ic_security.svg" />
     <EmbeddedResource Include="Resources\mobile-services.json" />
+    <EmbeddedResource Include="Resources\person.svg" />
+    <EmbeddedResource Include="Resources\ic_done.svg" />
+    <EmbeddedResource Include="Resources\ic_close.svg" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="Resources\StringResources.resx">
@@ -125,5 +127,8 @@
     <None Remove="Resources\ic_openid_connect.png" />
     <None Remove="Resources\ic_security.svg" />
     <None Remove="Resources\mobile-services.json" />
+    <None Remove="Resources\person.svg" />
+    <None Remove="Resources\ic_done.svg" />
+    <None Remove="Resources\ic_close.svg" />
   </ItemGroup>
 </Project>

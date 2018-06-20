@@ -49,6 +49,12 @@ namespace Example.Views
             oldSelectedItem = item;
         }
 
+        internal void ChangePage(Page page)
+        {
+            Detail = new NavigationPage(page);
+            IsPresented = false;
+        }
+
 
         /// <summary>
         /// Replaces page when item is selected in the drawer menu.

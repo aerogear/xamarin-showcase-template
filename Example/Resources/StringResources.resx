@@ -189,4 +189,37 @@ If you would like to get involved in this work, please check out our community c
   <data name="UnderConstructionTitle" xml:space="preserve">
     <value>Under Construction</value>
   </data>
+  <!--  Auth Resources-->
+
+  <data name="auth.Login" xml:space="preserve">
+    <value>Authenticate</value>
+  </data>
+
+  <data name="auth.Logout" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+    
+  <data name="auth.userDetails.FullName" xml:space="preserve">
+    <value>Full Name</value>
+  </data>
+
+  <data name="auth.userDetails.Username" xml:space="preserve">
+    <value>Full Name</value>
+  </data>
+
+  <data name="auth.userDetails.Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+
+  <data name="auth.userDetails.AssignedRoles" xml:space="preserve">
+    <value>Assigned Roles</value>
+  </data>
+
+  <data name="auth.userDetails.Otp2FAEnabled" xml:space="preserve">
+    <value>OTP 2FA Enabled</value>
+  </data>
+
+  <data name="auth.userDetails.EmailVerified" xml:space="preserve">
+    <value>Email Verified</value>
+  </data>
 </root>
