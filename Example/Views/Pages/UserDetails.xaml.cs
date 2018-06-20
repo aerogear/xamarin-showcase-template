@@ -42,7 +42,7 @@ namespace Example.Views.Pages
             var authService = MobileCore.Instance.GetService<IAuthService>();
             authService.Logout(authService.CurrentUser()).ContinueWith(result =>
             {
-                Device.BeginInvokeOnMainThread(() => Navigation.PushAsync(new AuthPage()));
+                Device.BeginInvokeOnMainThread(() => ((RootPage)(App.Current.MainPage)).ChangePage(new AuthPage()));
             });
         }
     }

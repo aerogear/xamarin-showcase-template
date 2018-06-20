@@ -6,7 +6,8 @@
              xmlns:controls="clr-namespace:TwinTechsForms.NControl;assembly=TwinTechsForms.NControl.SvgImageView" 
              xmlns:utils="clr-namespace:Example.Utils" 
              xmlns:s="clr-namespace:Example.Utils;assembly=Example"
-             Title="Identity Profile" BackgroundColor="#3b96b1" x:Name="UserDetailsPage">
+             Title="Identity Profile" BackgroundColor="#3b96b1" x:Name="UserDetailsPage"
+             NavigationPage.HasBackButton="False">
     
     <StackLayout VerticalOptions="FillAndExpand" Padding="0,0,0,0" Spacing="0">
         <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" BackgroundColor="White" Margin="10,10,10,0" Padding="0,0,0,0" Spacing="0">

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using AeroGear.Mobile.Auth;
 using AeroGear.Mobile.Core;
 using Example.Auth;
+using Example.Models;
 using Xamarin.Forms;
 
 using Xamarin.Forms.Xaml;
@@ -13,6 +14,11 @@ namespace Example.Views.Pages
     {
         public AuthPage()
         {
+            if (MobileCore.Instance.GetService<IAuthService>().CurrentUser() != null)
+            {
+                Device.BeginInvokeOnMainThread(() => ((RootPage)(App.Current.MainPage)).ChangePage(new UserDetails()));
+                return;
+            }
             InitializeComponent();
         }
 
@@ -22,7 +28,7 @@ namespace Example.Views.Pages
             var authOptions = DependencyService.Get<IAuthenticateOptionsProvider>().GetOptions();
             service.Authenticate(authOptions).ContinueWith(result =>
             {
-                Device.BeginInvokeOnMainThread(() => Navigation.PushAsync(new UserDetails()));
+                Device.BeginInvokeOnMainThread(() => ((RootPage)(App.Current.MainPage)).ChangePage(new UserDetails()));
             });
         }
     }
