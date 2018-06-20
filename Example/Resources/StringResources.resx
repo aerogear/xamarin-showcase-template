@@ -204,7 +204,7 @@ If you would like to get involved in this work, please check out our community c
   </data>
 
   <data name="auth.userDetails.Username" xml:space="preserve">
-    <value>Full Name</value>
+    <value>Username</value>
   </data>
 
   <data name="auth.userDetails.Email" xml:space="preserve">
