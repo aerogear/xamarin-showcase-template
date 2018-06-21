@@ -20,10 +20,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Remove="Views\Pages\AuthPage.cs" />
-    <Compile Remove="Views\Pages\HomePage.xaml %28copy%29.cs" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Update="Resources\StringResources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>

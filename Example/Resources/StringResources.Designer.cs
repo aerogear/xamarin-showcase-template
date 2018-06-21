@@ -179,6 +179,36 @@ namespace Example.Resources {
             }
         }
         
+        public static string idm_doc_link {
+            get {
+                return ResourceManager.GetString("idm.doc.link", resourceCulture);
+            }
+        }
+        
+        public static string idm_sso_doc_link {
+            get {
+                return ResourceManager.GetString("idm.sso.doc.link", resourceCulture);
+            }
+        }
+        
+        public static string device_security_doc_link {
+            get {
+                return ResourceManager.GetString("device.security.doc.link", resourceCulture);
+            }
+        }
+        
+        public static string push_doc_link {
+            get {
+                return ResourceManager.GetString("push.doc.link", resourceCulture);
+            }
+        }
+        
+        public static string metrics_doc_link {
+            get {
+                return ResourceManager.GetString("metrics.doc.link", resourceCulture);
+            }
+        }
+        
         public static string auth_Login {
             get {
                 return ResourceManager.GetString("auth.Login", resourceCulture);

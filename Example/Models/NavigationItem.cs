@@ -97,7 +97,10 @@ namespace Example.Models
         /// <summary>
         /// Links to the <see cref="Type"/> of the page that is represented by the item.
         /// </summary>
-        public Type TargetType { get; set; }
+        public Type TargetType { protected get; set; }
+
+
+        public virtual Page Page => (Page)Activator.CreateInstance(this.TargetType);
 
         /// <summary>
         /// Returns color that is used for rentering the item in the navigation drawer.

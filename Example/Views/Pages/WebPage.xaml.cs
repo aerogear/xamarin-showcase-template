@@ -12,9 +12,10 @@ namespace Example.Views.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class WebPage : ContentPage
     {
-        public WebPage()
+        public WebPage(string source)
         {
             InitializeComponent();
+            this.PageWebView.Source = source;
         }
     }
 }

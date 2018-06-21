@@ -40,7 +40,7 @@ namespace Example.Views
             if (item == null || !item.Selectable || item==oldSelectedItem)
                 return;
 
-            var page = (Page)Activator.CreateInstance(item.TargetType);
+            var page = item.Page;
             if (String.IsNullOrEmpty(page.Title)) page.Title = item.PageTitle;
             Detail = new NavigationPage(page);
             IsPresented = false;
