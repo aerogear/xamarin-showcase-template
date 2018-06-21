@@ -4,6 +4,7 @@ using AeroGear.Mobile.Auth;
 using AeroGear.Mobile.Core;
 using Example.Auth;
 using Example.Models;
+using Example.Resources;
 using Xamarin.Forms;
 
 using Xamarin.Forms.Xaml;
@@ -22,14 +23,20 @@ namespace Example.Views.Pages
             InitializeComponent();
         }
 
-        public void OnAuthenticateClicked(object sender, EventArgs args)
+        public async void OnAuthenticateClicked(object sender, EventArgs args)
         {
             IAuthService service = MobileCore.Instance.GetService<IAuthService>();
             var authOptions = DependencyService.Get<IAuthenticateOptionsProvider>().GetOptions();
-            service.Authenticate(authOptions).ContinueWith(result =>
+
+            try 
             {
+                var user = await service.Authenticate(authOptions);
                 Device.BeginInvokeOnMainThread(() => ((RootPage)(App.Current.MainPage)).ChangePage(new UserDetails()));
-            });
+            }
+            catch 
+            {
+                App.Current.MainPage.DisplayAlert(StringResources.dialog_error_title, StringResources.service_auth_authentication_failed, StringResources.button_close_caption);
+            }
         }
     }
 }

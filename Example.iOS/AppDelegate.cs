@@ -9,15 +9,30 @@ using ImageCircle.Forms.Plugin.iOS;
 using UIKit;
 using static AeroGear.Mobile.Core.Configuration.ServiceConfiguration;
 using FFImageLoading.Forms.Platform;
+using AeroGear.Mobile.Core.Utils;
 
 namespace Example.iOS
 {
+
     // The UIApplicationDelegate for the application. This class is responsible for launching the 
     // User Interface of the application, as well as listening (and optionally responding) to 
     // application events from iOS.
     [Register("AppDelegate")]
     public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
     {
+        private bool SilentlyRun(Action act)
+        {
+            try
+            {
+                act.Invoke();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
         //
         // This method is invoked when the application has loaded and is ready to run. In this 
         // method you should instantiate the window, load the UI into it and then make the window
@@ -32,10 +47,15 @@ namespace Example.iOS
 
             var xamApp = new App();
             MobileCore core = MobileCoreIOS.Init(xamApp.GetType().Assembly);
-            var authService = AuthService.InitializeService();
+            if (SilentlyRun( () => AuthService.InitializeService()))
+            {
+                // Authentication service available
+                var authConfig = AuthenticationConfig.Builder.RedirectUri("org.aerogear.mobile.example:/callback").Build();
+                var authService = MobileCore.Instance.GetService<IAuthService>();
+                authService.Configure(authConfig);
+            }
             SecurityService.InitializeService();
-            var authConfig = AuthenticationConfig.Builder.RedirectUri("org.aerogear.mobile.example:/callback").Build();
-            authService.Configure(authConfig);
+
             ImageCircleRenderer.Init();
             LoadApplication(xamApp);
             return base.FinishedLaunching(app, options);

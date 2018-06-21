@@ -202,7 +202,12 @@ If you would like to get involved in this work, please check out our community c
   <data name="button.showdocs.caption" xml:space="preserve">
     <value>Show Documentation</value>
   </data>
-    
+
+  <data name="dialog.error.title" xml:space="preserve">
+    <value>Error</value>
+  </data>
+
+
   <data name="dialog.notconfigured.title" xml:space="preserve">
     <value>Feature Not Configured</value>
   </data>
@@ -213,6 +218,10 @@ If you would like to get involved in this work, please check out our community c
 
   <data name="service.auth.name" xml:space="preserve">
     <value>identity management</value>
+  </data>
+
+  <data name="service.auth.authentication.failed" xml:space="preserve">
+    <value>Authentication Failed</value>
   </data>
     
   <!--  Documentation links-->

@@ -1,5 +1,6 @@
 ﻿
 //using Acr.UserDialogs;
+using System;
 using AeroGear.Mobile.Auth;
 using AeroGear.Mobile.Auth.Config;
 using AeroGear.Mobile.Core;
@@ -19,6 +20,19 @@ namespace Example.Android
     {
         public static MainActivity Instance;
 
+        private bool SilentlyRun(Action act)
+        {
+            try
+            {
+                act.Invoke();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             TabLayoutResource = Resource.Layout.Tabbar;
@@ -34,9 +48,15 @@ namespace Example.Android
             var app = new App();
             MobileCoreAndroid.Init(app.GetType().Assembly,ApplicationContext);
             SecurityService.InitializeService();
-            IAuthService authService = AuthService.InitializeService();
-            var authConfig = AuthenticationConfig.Builder.RedirectUri("org.aerogear.mobile.example:/callback").Build();
-            authService.Configure(authConfig);
+
+            if (SilentlyRun(() => AuthService.InitializeService()))
+            {
+                // Authentication service available
+                var authConfig = AuthenticationConfig.Builder.RedirectUri("org.aerogear.mobile.example:/callback").Build();
+                var authService = MobileCore.Instance.GetService<IAuthService>();
+                authService.Configure(authConfig);
+            }
+
             LoadApplication(app);
         }
 

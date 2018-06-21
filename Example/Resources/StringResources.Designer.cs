@@ -30,7 +30,7 @@ namespace Example.Resources {
         public static System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.Equals(null, resourceMan)) {
-                    System.Resources.ResourceManager temp = new System.Resources.ResourceManager("Example.Resources.StringResources", typeof(StringResources).Assembly);
+                    System.Resources.ResourceManager temp = new System.Resources.ResourceManager("Example.Resources.StringResources", typeof(StringResources).GetTypeInfo().Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -197,6 +197,12 @@ namespace Example.Resources {
             }
         }
         
+        public static string dialog_error_title {
+            get {
+                return ResourceManager.GetString("dialog.error.title", resourceCulture);
+            }
+        }
+        
         public static string dialog_notconfigured_title {
             get {
                 return ResourceManager.GetString("dialog.notconfigured.title", resourceCulture);
@@ -212,6 +218,12 @@ namespace Example.Resources {
         public static string service_auth_name {
             get {
                 return ResourceManager.GetString("service.auth.name", resourceCulture);
+            }
+        }
+        
+        public static string service_auth_authentication_failed {
+            get {
+                return ResourceManager.GetString("service.auth.authentication.failed", resourceCulture);
             }
         }
         
