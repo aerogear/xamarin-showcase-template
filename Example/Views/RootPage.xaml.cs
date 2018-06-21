@@ -42,12 +42,24 @@ namespace Example.Views
                 return;
 
             var page = item.Page;
+
+            if (page == null)
+            {
+                IsPresented = false;
+                DrawerMenuPage.ListView.SelectedItem = oldSelectedItem;
+                return;
+            }
             if (String.IsNullOrEmpty(page.Title)) page.Title = item.PageTitle;
             Detail = new NavigationPage(page);
             IsPresented = false;
             item.Selected = true;
             if (oldSelectedItem!=null) oldSelectedItem.Selected = false;
             oldSelectedItem = item;
+        }
+
+        public void MoveTo(NavigationItemIds navItemId)
+        {
+            DrawerMenuPage.ListView.SelectedItem = DrawerMenuPage.GetItem(navItemId);
         }
 
         internal void ChangePage(Page page)

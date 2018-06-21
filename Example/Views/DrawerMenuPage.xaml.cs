@@ -33,5 +33,10 @@ namespace Example.Views
             ListView = MenuItemsListView;
             Title = StringResources.Menu;
         }
+
+        internal NavigationItem GetItem(NavigationItemIds id)
+        {
+            return ViewModel.Items[id];
+        }
     }
 }

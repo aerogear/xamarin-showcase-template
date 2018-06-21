@@ -185,6 +185,36 @@ namespace Example.Resources {
             }
         }
         
+        public static string button_close_caption {
+            get {
+                return ResourceManager.GetString("button.close.caption", resourceCulture);
+            }
+        }
+        
+        public static string button_showdocs_caption {
+            get {
+                return ResourceManager.GetString("button.showdocs.caption", resourceCulture);
+            }
+        }
+        
+        public static string dialog_notconfigured_title {
+            get {
+                return ResourceManager.GetString("dialog.notconfigured.title", resourceCulture);
+            }
+        }
+        
+        public static string dialog_notconfigured_message {
+            get {
+                return ResourceManager.GetString("dialog.notconfigured.message", resourceCulture);
+            }
+        }
+        
+        public static string service_auth_name {
+            get {
+                return ResourceManager.GetString("service.auth.name", resourceCulture);
+            }
+        }
+        
         public static string idm_doc_link {
             get {
                 return ResourceManager.GetString("idm.doc.link", resourceCulture);
