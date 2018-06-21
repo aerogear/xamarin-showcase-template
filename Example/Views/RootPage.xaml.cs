@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Example.Models;
 using Example.Resources;
 using Example.ViewModels;
+using Example.Views.Pages;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
