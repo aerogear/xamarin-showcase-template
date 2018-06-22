@@ -26,15 +26,16 @@ namespace Example.ViewModels
             new DescriptionNavigationItem { Id=2, Title=StringResources.NavDevSec,Icon=ResourceUtils.GetSvg("ic_security"),TextContent=StringResources.DeviceSecurityDesc+StringResources.FurtherInformation },
                 new WebNavigationItem { Id=20, Title=StringResources.NavDocumentation,SubItem=true, Source=StringResources.device_security_doc_link},
                 new NavigationItem {Id = 21, Title = StringResources.NavDeviceTrust, TargetType=typeof(SecurityCheckPage), SubItem=true },
-                new NavigationItem { Id = 22, Title =StringResources.NavSecStorage, TargetType=typeof(LandingPage),SubItem=true},
-                new NavigationItem { Id = 23, Title =StringResources.NavCertPinning, TargetType=typeof(LandingPage),SubItem=true},
-            new DescriptionNavigationItem { Id=3, Title=StringResources.NavPush,Icon=ResourceUtils.GetSvg("ic_notifications_active"),TextContent=StringResources.PushNotificationsDesc+StringResources.FurtherInformation },
-                new WebNavigationItem { Id = 31, Title =StringResources.NavDocumentation, SubItem=true, Source=StringResources.push_doc_link},
-                CreateUnderConstructionItem (32,StringResources.NavDevReg),
-                CreateUnderConstructionItem (33, StringResources.NavPushMsg),
+                CreateUnderConstructionItem(22, StringResources.NavSecStorage),
+                CreateUnderConstructionItem(23, StringResources.NavCertPinning),
+            new DescriptionNavigationItem { Id=3, Title=StringResources.NavPush,Icon=ResourceUtils.GetSvg("ic_notifications_active"),TextContent=StringResources.PushNotificationsDesc+StringResources.FurtherInformation},
+                new WebNavigationItem { Id = 31, Title =StringResources.NavDocumentation, SubItem=true, Source=StringResources.push_doc_link
+},
+                CreateUnderConstructionItem(32, StringResources.NavDevReg),
+                CreateUnderConstructionItem(33, StringResources.NavPushMsg),
             new DescriptionNavigationItem { Id=4, Title=StringResources.NavMetrics,Icon=ResourceUtils.GetSvg("ic_insert_chart"),TextContent=StringResources.MobileMetricsDesc+StringResources.FurtherInformation },
                 new WebNavigationItem { Id = 41, Title =StringResources.NavDocumentation, SubItem=true, Source=StringResources.metrics_doc_link},
-                CreateUnderConstructionItem (42, StringResources.NavDeviceProfileInfo),
+                CreateUnderConstructionItem(42, StringResources.NavDeviceProfileInfo),
                 CreateUnderConstructionItem(43, StringResources.NavTrustCheckInfo)
 
             });
