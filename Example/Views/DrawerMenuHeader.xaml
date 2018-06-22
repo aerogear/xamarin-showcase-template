@@ -5,9 +5,9 @@
              x:Class="Example.Views.DrawerMenuHeader">
     <ContentView.Content>
         <RelativeLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{DynamicResource Primary}">
-            <circleimg:CircleImage x:Name="Image" Source="{Binding Image}" Aspect="AspectFill" WidthRequest="64" HeightRequest="64" HorizontalOptions="Center" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=16}" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=16}" />
-            <Label x:Name="Line1" Text="{Binding Line1}" FontSize="14" FontAttributes="Bold" TextColor="{DynamicResource InversePrimaryTextColor}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=16}" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=-48}" />
-            <Label x:Name="Line2" Text="{Binding Line2}" FontSize="14" TextColor="{DynamicResource InversePrimaryTextColor}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=16}" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, Property=Y,ElementName=Line1, Factor=1, Constant=16}" />
+            <circleimg:CircleImage x:Name="Image" Source="{Binding Image}" Aspect="AspectFill" WidthRequest="48" HeightRequest="48" HorizontalOptions="Center" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=16}" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=16}" />
+            <Label x:Name="Line1" Text="{Binding Line1}" FontSize="14" FontAttributes="Bold" TextColor="{DynamicResource InversePrimaryTextColor}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=Image, Property=Width, Factor=1, Constant=32}"  RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=24}" />
+            <Label x:Name="Line2" Text="{Binding Line2}" FontSize="14" TextColor="{DynamicResource InversePrimaryTextColor}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=Image, Property=Width, Factor=1, Constant=32}" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, Property=Y,ElementName=Line1, Factor=1, Constant=16}" />
         </RelativeLayout>
     </ContentView.Content>
 </ContentView>
