@@ -6,7 +6,6 @@ using AeroGear.Mobile.Core.Configuration;
 using AeroGear.Mobile.Security;
 using Foundation;
 using ImageCircle.Forms.Plugin.iOS;
-using Plugin.HtmlLabel.iOS;
 using UIKit;
 using static AeroGear.Mobile.Core.Configuration.ServiceConfiguration;
 using FFImageLoading.Forms.Platform;
@@ -38,7 +37,6 @@ namespace Example.iOS
             var authConfig = AuthenticationConfig.Builder.RedirectUri("org.aerogear.mobile.example:/callback").Build();
             authService.Configure(authConfig);
             ImageCircleRenderer.Init();
-            HtmlLabelRenderer.Initialize();
             LoadApplication(xamApp);
             return base.FinishedLaunching(app, options);
         }

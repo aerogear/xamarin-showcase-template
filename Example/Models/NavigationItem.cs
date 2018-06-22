@@ -33,7 +33,7 @@ namespace Example.Models
             item.Selected = true;
             item.TargetType = typeof(DescriptionNavigationItem);
             item.Subtitle = "";
-            item.TextContent = StringResources.HomeWelcome;
+            item.TextContent = StringResources.HomeWelcome+StringResources.FurtherInformation;
             return item;
         });
 

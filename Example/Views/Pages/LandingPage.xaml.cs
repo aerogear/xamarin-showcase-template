@@ -32,6 +32,16 @@ namespace Example.Views.Pages
             private set
             {
                 textContent = value;
+                var htmlSource = new HtmlWebViewSource();
+                htmlSource.Html = @"<html>
+                <style>
+                    body { 
+                        font-family: sans-serif;
+                    }
+                </style>
+                <body>"+value+@"</body></html>";
+
+                WebView.Source = htmlSource;
                 OnPropertyChanged("TextContent");
             }
         }
@@ -43,10 +53,24 @@ namespace Example.Views.Pages
             InitializeComponent();
             BindingContext = this;
             Subtitle = subtitle;
-            TextContent = textContent;        
-            
+            TextContent = textContent;
+
+            WebView.Navigating += (s, e) =>
+            {
+                if (e.Url.StartsWith("http") || e.Url.StartsWith("https"))
+                {
+                    try
+                    {
+                        var uri = new Uri(e.Url);
+                        Device.OpenUri(uri);
+                    }
+                    catch (Exception)
+                    {
+                    }
+
+                    e.Cancel = true;
+                }
+            };
         }
-
-
     }
 }

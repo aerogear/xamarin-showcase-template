@@ -11,7 +11,6 @@ using Android.OS;
 using Example.Android.Auth;
 using FFImageLoading.Forms.Droid;
 using ImageCircle.Forms.Plugin.Droid;
-using Plugin.HtmlLabel.Android;
 
 namespace Example.Android
 {
@@ -31,7 +30,6 @@ namespace Example.Android
             
             CachedImageRenderer.Init(true);
             ImageCircleRenderer.Init();
-            HtmlLabelRenderer.Initialize();
             Instance = this;
             var app = new App();
             MobileCoreAndroid.Init(app.GetType().Assembly,ApplicationContext);
