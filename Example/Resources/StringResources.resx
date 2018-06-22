@@ -59,178 +59,222 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
-        <xsd:element name="root" msdata:IsDataSet="true">
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
             <xsd:complexType>
-                <xsd:choice maxOccurs="unbounded">
-                    <xsd:element name="metadata">
-                        <xsd:complexType>
-                            <xsd:sequence>
-                                <xsd:element name="value" type="xsd:string" minOccurs="0" />
-                            </xsd:sequence>
-                            <xsd:attribute name="name" use="required" type="xsd:string" />
-                            <xsd:attribute name="type" type="xsd:string" />
-                            <xsd:attribute name="mimetype" type="xsd:string" />
-                            <xsd:attribute ref="xml:space" />
-                        </xsd:complexType>
-                    </xsd:element>
-                    <xsd:element name="assembly">
-                        <xsd:complexType>
-                            <xsd:attribute name="alias" type="xsd:string" />
-                            <xsd:attribute name="name" type="xsd:string" />
-                        </xsd:complexType>
-                    </xsd:element>
-                    <xsd:element name="data">
-                        <xsd:complexType>
-                            <xsd:sequence>
-                                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-                                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
-                            </xsd:sequence>
-                            <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-                            <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-                            <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-                            <xsd:attribute ref="xml:space" />
-                        </xsd:complexType>
-                    </xsd:element>
-                    <xsd:element name="resheader">
-                        <xsd:complexType>
-                            <xsd:sequence>
-                                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-                            </xsd:sequence>
-                            <xsd:attribute name="name" type="xsd:string" use="required" />
-                        </xsd:complexType>
-                    </xsd:element>
-                </xsd:choice>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
-        </xsd:element>
-    </xsd:schema>
-    <resheader name="resmimetype">
-        <value>text/microsoft-resx</value>
-    </resheader>
-    <resheader name="version">
-        <value>2.0</value>
-    </resheader>
-    <resheader name="reader">
-        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-    </resheader>
-    <resheader name="writer">
-        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-    </resheader>
-    <data name="AppName" xml:space="preserve">
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppName" xml:space="preserve">
     <value>AeroGear Xamarin Showcase</value>
   </data>
-    <data name="NavHome" xml:space="preserve">
+  <data name="NavHome" xml:space="preserve">
     <value>Home</value>
   </data>
-    <data name="NavSecurity" xml:space="preserve">
+  <data name="NavSecurity" xml:space="preserve">
     <value>Security</value>
   </data>
-    <data name="NavAuth" xml:space="preserve">
+  <data name="NavAuth" xml:space="preserve">
     <value>Authentication</value>
   </data>
-    <data name="HomeWelcome" xml:space="preserve">
+  <data name="HomeWelcome" xml:space="preserve">
     <value>&lt;center&gt;This app demonstrates how to use the AeroGear Mobile services, backed by OpenShift to perform a wide range of common mobile tasks such as Identity Management, Device Security, Metrics Capture, Push Notifications and more.&lt;/center&gt;
     &lt;br&gt;
     </value>
   </data>
-    <data name="FurtherInformation" xml:space="preserve">
-        <value>
+  <data name="FurtherInformation" xml:space="preserve">
+    <value>
             &lt;center&gt;For further information, visit &lt;span style="color: #2e6980"&gt;&lt;a href="http://www.aerogear.org" &gt;www.aerogear.org&lt;/a&gt;&lt;/span&gt;&lt;/center&gt;
-        </value>
-        </data>
-    <data name="Menu" xml:space="preserve">
+    </value>
+  </data>
+  <data name="Menu" xml:space="preserve">
     <value>Menu</value>
   </data>
-    <data name="AeroGear" xml:space="preserve">
+  <data name="AeroGear" xml:space="preserve">
     <value>AeroGear</value>
   </data>
-    <data name="NavCertPinning" xml:space="preserve">
+  <data name="NavCertPinning" xml:space="preserve">
     <value>Cert. Pinning</value>
   </data>
-    <data name="NavDeviceProfileInfo" xml:space="preserve">
+  <data name="NavDeviceProfileInfo" xml:space="preserve">
     <value>Device Profile Info</value>
   </data>
-    <data name="NavDeviceTrust" xml:space="preserve">
+  <data name="NavDeviceTrust" xml:space="preserve">
     <value>Device Trust</value>
   </data>
-    <data name="NavDevReg" xml:space="preserve">
+  <data name="NavDevReg" xml:space="preserve">
     <value>Device Registration</value>
   </data>
-    <data name="NavDocumentation" xml:space="preserve">
+  <data name="NavDocumentation" xml:space="preserve">
     <value>Documentation</value>
   </data>
-    <data name="NavIdtMgmt" xml:space="preserve">
+  <data name="NavIdtMgmt" xml:space="preserve">
     <value>Identity Management</value>
   </data>
-    <data name="NavMetrics" xml:space="preserve">
+  <data name="NavMetrics" xml:space="preserve">
     <value>Metrics</value>
   </data>
-    <data name="NavPush" xml:space="preserve">
+  <data name="NavPush" xml:space="preserve">
     <value>Push Notifications</value>
   </data>
-    <data name="NavPushMsg" xml:space="preserve">
+  <data name="NavPushMsg" xml:space="preserve">
     <value>Push Messages</value>
   </data>
-    <data name="NavSecStorage" xml:space="preserve">
+  <data name="NavSecStorage" xml:space="preserve">
     <value>Secure Storage</value>
   </data>
-    <data name="NavTrustCheckInfo" xml:space="preserve">
+  <data name="NavTrustCheckInfo" xml:space="preserve">
     <value>Trust Check Info</value>
   </data>
-    <data name="NavDevSec" xml:space="preserve">
+  <data name="NavDevSec" xml:space="preserve">
     <value>Device Security</value>
   </data>
-    <data name="UnderConstruction" xml:space="preserve">
+  <data name="UnderConstruction" xml:space="preserve">
     <value>&lt;center&gt;This feature is currently under construction for this platform.
 &lt;br&gt;&lt;br&gt;
 If you would like to get involved in this work, please check out our community contribution page.&lt;br&gt;&lt;span style="color: #2e6980"&gt;
  &lt;a href="http://www.aerogear.org/community#guides"&gt;www.aerogear.org/community#guides&lt;/a&gt;&lt;/span&gt;&lt;/center&gt;
     </value>
   </data>
-    <data name="NavSSO" xml:space="preserve">
+  <data name="NavSSO" xml:space="preserve">
     <value>SSO</value>
   </data>
-    <data name="UnderConstructionTitle" xml:space="preserve">
+  <data name="UnderConstructionTitle" xml:space="preserve">
     <value>Under Construction</value>
   </data>
-    <data name="idm.doc.link" xml:space="preserve">
+
+  <data name="button.close.caption" xml:space="preserve">
+    <value>Close</value>
+  </data>
+
+  <data name="button.showdocs.caption" xml:space="preserve">
+    <value>Show Documentation</value>
+  </data>
+
+  <data name="dialog.error.title" xml:space="preserve">
+    <value>Error</value>
+  </data>
+
+
+  <data name="dialog.notconfigured.title" xml:space="preserve">
+    <value>Feature Not Configured</value>
+  </data>
+
+  <data name="dialog.notconfigured.message" xml:space="preserve">
+    <value>The service {0} does not have a configuration in mobile-services.json. Refer to the documentation for instructions on how to configure this service.</value>
+  </data>
+
+  <data name="service.auth.name" xml:space="preserve">
+    <value>identity management</value>
+  </data>
+
+  <data name="service.auth.authentication.failed" xml:space="preserve">
+    <value>Authentication Failed</value>
+  </data>
+    
+  <!--  Documentation links-->
+  <data name="idm.doc.link" xml:space="preserve">
     <value>https://docs.aerogear.org/aerogear/latest/keycloak/index.html</value>
   </data>
-    <data name="idm.sso.doc.link" xml:space="preserve">
+
+  <data name="idm.sso.doc.link" xml:space="preserve">
     <value>https://docs.aerogear.org/aerogear/latest/keycloak/index.html?sso=1</value>
   </data>
-    <data name="device.security.doc.link" xml:space="preserve">
+
+  <data name="device.security.doc.link" xml:space="preserve">
     <value>https://docs.aerogear.org/aerogear/latest/security/index.html</value>
   </data>
-    <data name="push.doc.link" xml:space="preserve">
+
+  <data name="push.doc.link" xml:space="preserve">
     <value>https://docs.aerogear.org/aerogear/latest/push/index.html</value>
   </data>
-    <data name="metrics.doc.link" xml:space="preserve">
+
+  <data name="metrics.doc.link" xml:space="preserve">
     <value>https://docs.aerogear.org/aerogear/latest/metrics/index.html</value>
   </data>
-    <data name="auth.Login" xml:space="preserve">
+    
+  <!--  Auth Resources-->
+  <data name="auth.Login" xml:space="preserve">
     <value>Authenticate</value>
   </data>
-    <data name="auth.Logout" xml:space="preserve">
+
+  <data name="auth.Logout" xml:space="preserve">
     <value>Logout</value>
   </data>
-    <data name="auth.userDetails.FullName" xml:space="preserve">
+    
+  <data name="auth.userDetails.FullName" xml:space="preserve">
     <value>Full Name</value>
   </data>
-    <data name="auth.userDetails.Username" xml:space="preserve">
+
+  <data name="auth.userDetails.Username" xml:space="preserve">
     <value>Username</value>
   </data>
-    <data name="auth.userDetails.Email" xml:space="preserve">
+
+  <data name="auth.userDetails.Email" xml:space="preserve">
     <value>Email</value>
   </data>
-    <data name="auth.userDetails.AssignedRoles" xml:space="preserve">
+
+  <data name="auth.userDetails.AssignedRoles" xml:space="preserve">
     <value>Assigned Roles</value>
   </data>
-    <data name="auth.userDetails.Otp2FAEnabled" xml:space="preserve">
+
+  <data name="auth.userDetails.Otp2FAEnabled" xml:space="preserve">
     <value>OTP 2FA Enabled</value>
   </data>
-    <data name="auth.userDetails.EmailVerified" xml:space="preserve">
+
+  <data name="auth.userDetails.EmailVerified" xml:space="preserve">
     <value>Email Verified</value>
   </data>
     <data name="DeviceSecurityDesc" xml:space="preserve">

@@ -11,7 +11,6 @@ namespace Example.Models
 {
     public class NavigationItem : INotifyPropertyChanged
     {
-
         /// <summary>
         /// Home page default. (first page displayed)
         /// </summary>
