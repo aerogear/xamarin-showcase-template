@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using Example.Resources;
@@ -24,13 +25,15 @@ namespace Example.Models
 
         private static Lazy<NavigationItem> _HOME_PAGE = new Lazy<NavigationItem>(() =>
         {
-            var item = new NavigationItem();
+            var item = new DescriptionNavigationItem();
             item.Id = 0;
             item.Title = StringResources.NavHome;
             item.PageTitle = StringResources.AppName;
             item.Icon = ResourceUtils.GetSvg("ic_home");
             item.Selected = true;
-            item.TargetType = typeof(HomePage);
+            item.TargetType = typeof(DescriptionNavigationItem);
+            item.Subtitle = "";
+            item.TextContent = StringResources.HomeWelcome+StringResources.FurtherInformation;
             return item;
         });
 
@@ -117,6 +120,7 @@ namespace Example.Models
             get => SubItem ? FontAttributes.None : FontAttributes.Bold;
         }
 
+        
         #region INotifyPropertyChanged Implementation
         public event PropertyChangedEventHandler PropertyChanged;
         void OnPropertyChanged([CallerMemberName] string propertyName = "")

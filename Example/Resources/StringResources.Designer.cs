@@ -77,6 +77,12 @@ namespace Example.Resources {
             }
         }
         
+        public static string FurtherInformation {
+            get {
+                return ResourceManager.GetString("FurtherInformation", resourceCulture);
+            }
+        }
+        
         public static string Menu {
             get {
                 return ResourceManager.GetString("Menu", resourceCulture);
@@ -254,6 +260,30 @@ namespace Example.Resources {
         public static string auth_userDetails_EmailVerified {
             get {
                 return ResourceManager.GetString("auth.userDetails.EmailVerified", resourceCulture);
+            }
+        }
+        
+        public static string DeviceSecurityDesc {
+            get {
+                return ResourceManager.GetString("DeviceSecurityDesc", resourceCulture);
+            }
+        }
+        
+        public static string IdtManagementDesc {
+            get {
+                return ResourceManager.GetString("IdtManagementDesc", resourceCulture);
+            }
+        }
+        
+        public static string MobileMetricsDesc {
+            get {
+                return ResourceManager.GetString("MobileMetricsDesc", resourceCulture);
+            }
+        }
+        
+        public static string PushNotificationsDesc {
+            get {
+                return ResourceManager.GetString("PushNotificationsDesc", resourceCulture);
             }
         }
     }
