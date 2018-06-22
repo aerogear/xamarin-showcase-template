@@ -7,7 +7,7 @@
              xmlns:s="clr-namespace:Example.Utils;assembly=Example"
              xmlns:htmlLabel="clr-namespace:Plugin.HtmlLabel;assembly=Plugin.HtmlLabel"
              >
-        <StackLayout Padding="48" >
+        <StackLayout Padding="48,48,48,0" >
                 <ffimageloadingsvg:SvgCachedImage Source="resource://Example.Resources.aerogear_logo.svg" HorizontalOptions="Center" />
                 <Label Text="{Binding Subtitle}" x:Name="LabelSubtitle"  FontSize="Large" FontAttributes="Bold" Margin="0,48,0,0" XAlign="Center" HorizontalOptions="Center" TextColor="{DynamicResource MediumGrayTextColor}" />
                 <WebView x:Name="WebView" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="0,16,0,0" />

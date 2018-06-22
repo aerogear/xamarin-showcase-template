@@ -37,6 +37,13 @@ namespace Example.Views.Pages
                 <style>
                     body { 
                         font-family: sans-serif;
+                        background-color:#FAFAFA;
+                    }
+                    a {
+                        color:#2e6980;
+                    }
+                    ul {
+                        padding-left:20;
                     }
                 </style>
                 <body>"+value+@"</body></html>";
