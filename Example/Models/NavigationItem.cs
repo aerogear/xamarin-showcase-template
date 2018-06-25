@@ -27,7 +27,6 @@ namespace Example.Models
             var item = new DescriptionNavigationItem();
             item.Id = 0;
             item.Title = StringResources.NavHome;
-            item.PageTitle = StringResources.AppName;
             item.Icon = ResourceUtils.GetSvg("ic_home");
             item.Selected = true;
             item.TargetType = typeof(DescriptionNavigationItem);
