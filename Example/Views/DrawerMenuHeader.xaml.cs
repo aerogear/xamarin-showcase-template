@@ -14,7 +14,7 @@ namespace Example.Views
         public DrawerMenuHeader()
         {
             InitializeComponent();           
-            BindingContext = new Header(StringResources.AeroGear,StringResources.AppName, ImageSource.FromResource("Example.Resources.aerogear_icon.png"));
+            BindingContext = new Header(StringResources.AeroGear,StringResources.NavSubheader, ImageSource.FromResource("Example.Resources.aerogear_icon.png"));
         }
 
     }
