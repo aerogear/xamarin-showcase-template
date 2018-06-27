@@ -135,8 +135,7 @@
     </value>
   </data>
   <data name="FurtherInformation" xml:space="preserve">
-    <value>
-            &lt;center&gt;For further information, visit &lt;span style="color: #2e6980"&gt;&lt;a href="http://www.aerogear.org" &gt;www.aerogear.org&lt;/a&gt;&lt;/span&gt;&lt;/center&gt;
+    <value>            &lt;center&gt;For further information, visit &lt;span style="color: #2e6980"&gt;&lt;a href="http://www.aerogear.org" &gt;www.aerogear.org&lt;/a&gt;&lt;/span&gt;&lt;/center&gt;
     </value>
   </data>
   <data name="Menu" xml:space="preserve">
