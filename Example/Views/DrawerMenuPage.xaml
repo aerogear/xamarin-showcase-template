@@ -9,7 +9,7 @@
     <StackLayout>
         <ListView x:Name="MenuItemsListView" SeparatorVisibility="None" HasUnevenRows="true" ItemsSource="{Binding NavigationItems}">
             <ListView.Header>
-                <masterpages:DrawerMenuHeader HorizontalOptions="Fill" HeightRequest="152" />
+                <masterpages:DrawerMenuHeader HorizontalOptions="Fill" HeightRequest="80" />
             </ListView.Header>
             <ListView.ItemTemplate>
                 <DataTemplate>
