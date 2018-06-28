@@ -53,7 +53,6 @@ namespace Example.ViewModels
             Items[NavigationItemIds.CERT_PINNING] = CreateUnderConstructionItem((int) NavigationItemIds.CERT_PINNING, StringResources.NavCertPinning);
             Items[NavigationItemIds.PUSH] = new DescriptionNavigationItem { Id=(int)NavigationItemIds.PUSH, Title=StringResources.NavPush,Icon=ResourceUtils.GetSvg("ic_notifications_active"),TextContent=StringResources.PushNotificationsDesc+StringResources.FurtherInformation};
             Items[NavigationItemIds.PUSH_DOC] = new WebNavigationItem { Id = (int)NavigationItemIds.PUSH_DOC, Title = StringResources.NavDocumentation, SubItem = true, Source = StringResources.push_doc_link };
-            Items[NavigationItemIds.PUSH_REG] = CreateUnderConstructionItem((int)NavigationItemIds.PUSH_REG, StringResources.NavDevReg);
             Items[NavigationItemIds.PUSH_MSG] = CreateUnderConstructionItem((int)NavigationItemIds.PUSH_MSG, StringResources.NavPushMsg);
             Items[NavigationItemIds.METRICS] = new DescriptionNavigationItem { Id=(int)NavigationItemIds.METRICS, Title=StringResources.NavMetrics,Icon=ResourceUtils.GetSvg("ic_insert_chart"),TextContent=StringResources.MobileMetricsDesc+StringResources.FurtherInformation };
             Items[NavigationItemIds.METRICS_DIC] = new WebNavigationItem { Id = (int)NavigationItemIds.METRICS_DIC, Title = StringResources.NavDocumentation, SubItem = true, Source = StringResources.metrics_doc_link };
