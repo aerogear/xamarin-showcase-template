@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2043
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example", "Example\Example.csproj", "{30C55998-0E1C-4AE9-A8A9-58815C2D5048}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example", "Example\Example.csproj", "{30C55998-0E1C-4AE9-A8A9-58815C2D5048}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example.Android", "Example.Android\Example.Android.csproj", "{05EE2696-9D94-4DCE-AD4F-2C1C5C052A57}"
 EndProject
@@ -95,7 +95,7 @@ Global
 		{00023BF2-7D9E-439C-8942-54D3F21E2710}.AppStore|iPhone.Build.0 = AppStore|iPhone
 		{00023BF2-7D9E-439C-8942-54D3F21E2710}.AppStore|iPhoneSimulator.ActiveCfg = AppStore|iPhoneSimulator
 		{00023BF2-7D9E-439C-8942-54D3F21E2710}.AppStore|iPhoneSimulator.Build.0 = AppStore|iPhoneSimulator
-		{00023BF2-7D9E-439C-8942-54D3F21E2710}.Debug|Any CPU.ActiveCfg = Debug|iPhone
+		{00023BF2-7D9E-439C-8942-54D3F21E2710}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
 		{00023BF2-7D9E-439C-8942-54D3F21E2710}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{00023BF2-7D9E-439C-8942-54D3F21E2710}.Debug|iPhone.Build.0 = Debug|iPhone
 		{00023BF2-7D9E-439C-8942-54D3F21E2710}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
@@ -105,6 +105,7 @@ Global
 		{00023BF2-7D9E-439C-8942-54D3F21E2710}.Release|iPhone.Build.0 = Release|iPhone
 		{00023BF2-7D9E-439C-8942-54D3F21E2710}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{00023BF2-7D9E-439C-8942-54D3F21E2710}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{00023BF2-7D9E-439C-8942-54D3F21E2710}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
