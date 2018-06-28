@@ -31,7 +31,7 @@ namespace Example.Models
             item.Selected = true;
             item.TargetType = typeof(DescriptionNavigationItem);
             item.Subtitle = "";
-            item.TextContent = StringResources.HomeWelcome+StringResources.FurtherInformation;
+            item.TextContent = StringResources.HomeWelcome + StringResources.FurtherInformation;
             return item;
         });
 
@@ -108,17 +108,35 @@ namespace Example.Models
         /// </summary>
         public Color SelectedColor
         {
-            get=>(Color)Application.Current.Resources[selected ? "Accent" : "PrimaryTextColor"];
+            get => (Color)Application.Current.Resources[selected ? "Accent" : "PrimaryTextColor"];
         }
 
         /// <summary>
         /// Returns <see cref="Xamarin.Forms.FontAttributes"/> that are used for rendereing  the item in the navigation drawer.
         /// </summary>
-        public FontAttributes FontAttributes {
+        public FontAttributes FontAttributes
+        {
             get => SubItem ? FontAttributes.None : FontAttributes.Bold;
         }
 
-        
+        /// <summary>
+        /// Gets the additional padding.
+        /// </summary>
+        /// <value>The additional padding</value>
+        public Thickness AdditionalPadding
+        {
+            get => SubItem ? new Thickness(16, 0, 0, 0) : new Thickness(0);
+        }
+
+        /// <summary>
+        /// Gets the size of the navigation item's font.
+        /// </summary>
+        /// <value>The size of the font.</value>
+        public double FontSize
+        {
+            get => SubItem ? 13 : 14;
+        }
+
         #region INotifyPropertyChanged Implementation
         public event PropertyChangedEventHandler PropertyChanged;
         void OnPropertyChanged([CallerMemberName] string propertyName = "")
