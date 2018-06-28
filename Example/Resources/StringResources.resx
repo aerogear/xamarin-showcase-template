@@ -153,9 +153,6 @@
   <data name="NavDeviceTrust" xml:space="preserve">
     <value>Device Trust</value>
   </data>
-  <data name="NavDevReg" xml:space="preserve">
-    <value>Device Registration</value>
-  </data>
   <data name="NavDocumentation" xml:space="preserve">
     <value>Documentation</value>
   </data>
