@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.ComponentModel;
 using AeroGear.Mobile.Core;
+using AeroGear.Mobile.Core.Metrics;
 using AeroGear.Mobile.Security;
+using AeroGear.Mobile.Security.Executors;
 using Example.Security;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -17,25 +18,29 @@ namespace Example.Views.Pages
         private const int TRUST_SCORE_DECIMAL_PLACE_COUNT = 0;
         private const decimal TRUST_SCORE_INITIAL_PERCENTAGE = 0;
 
-        private ObservableCollection<SecurityCheckResultDecorator> securityCheckResults = new ObservableCollection<SecurityCheckResultDecorator>();
+        private ICollection<SecurityCheckResult> securityCheckResults;
         private decimal trustScore = TRUST_SCORE_INITIAL_PERCENTAGE;
 
         private int passedChecksCount = 0;
         private int totalChecksCount = 0;
 
+        private MetricsService metricsService;
+
         public string ResultMessage => String.Format("({0} out of {1} checks passing)", passedChecksCount, totalChecksCount);
 
-        public ObservableCollection<SecurityCheckResultDecorator> CheckResults
-        {
-            get { return this.securityCheckResults; }
-        }
-        public decimal TrustScore
-        {
-            get { return this.trustScore; }
-        }
+        public ICollection<SecurityCheckResult> CheckResults => this.securityCheckResults;
+
+        public decimal TrustScore => this.trustScore;
 
         public SecurityCheckPage()
         {
+            MobileCore core = MobileCore.Instance;
+
+            if (core.GetFirstServiceConfigurationByType("metrics") != null)
+            {
+                this.metricsService = core.GetService<MetricsService>();
+            }
+
             InitializeComponent();
             BindingContext = this;
 
@@ -44,16 +49,10 @@ namespace Example.Views.Pages
 
         private void ReportCheckResults(ICollection<ISecurityCheck> securityChecks)
         {
-            securityCheckResults.Clear();
-            var securityService = MobileCore.Instance.GetService<ISecurityService>();
-            foreach (var check in securityChecks)
-            {
-                var checkResult = securityService.Check(check);
-                // Convert to a security check result report to include UI specific information.
-                securityCheckResults.Add((SecurityCheckResultDecorator)checkResult);
-            }
+            securityCheckResults = SecurityCheckExecutor.newSyncExecutor().WithSecurityCheck(securityChecks).WithMetricsService(this.metricsService).Build().Execute().Values;
 
-            this.trustScore = CalculateTrustScore(new List<SecurityCheckResultDecorator>(securityCheckResults));
+            this.trustScore = CalculateTrustScore(securityCheckResults);
+            NotifyPropertyChanged(nameof(CheckResults));
             NotifyPropertyChanged(nameof(TrustScore));
             NotifyPropertyChanged(nameof(ResultMessage));
 
@@ -75,13 +74,19 @@ namespace Example.Views.Pages
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        private decimal CalculateTrustScore(List<SecurityCheckResultDecorator> results)
+        private decimal CalculateTrustScore(ICollection<SecurityCheckResult> results)
         {
-            totalChecksCount = results.Count;
-            int failedResultCount = results.FindAll(result => !result.IsSecure).Count;
-            passedChecksCount = totalChecksCount - failedResultCount;
+            int failedResultCount = 0;
 
-            return 100 - Math.Round(Decimal.Divide(failedResultCount, results.Count) * 100, TRUST_SCORE_DECIMAL_PLACE_COUNT);
+            foreach(SecurityCheckResult result in results)
+            {
+                failedResultCount += ((SecurityCheckResultDecorator)result).IsSecure ? 0 : 1;
+            }
+
+            this.totalChecksCount = results.Count;
+            this.passedChecksCount = totalChecksCount - failedResultCount;
+
+            return 100 - Math.Round(Decimal.Divide(failedResultCount, this.totalChecksCount) * 100, TRUST_SCORE_DECIMAL_PLACE_COUNT);
         }
 
         void OnRefreshClicked(object sender, System.EventArgs e)

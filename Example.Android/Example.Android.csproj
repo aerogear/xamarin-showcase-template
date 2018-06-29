@@ -26,7 +26,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidLinkMode>None</AndroidLinkMode>
-    <AndroidSupportedAbis />
+<AndroidSupportedAbis>arm64-v8a;armeabi;armeabi-v7a;x86;x86_64</AndroidSupportedAbis>
     <AndroidTlsProvider>btls</AndroidTlsProvider>
     <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
     <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
@@ -68,22 +68,22 @@
       <Version>2.5.1.527436</Version>
     </PackageReference>
     <PackageReference Include="AeroGear.Mobile.Core">
-      <Version>1.0.0-alpha-2</Version>
+      <Version>1.0.0-alpha-3</Version>
     </PackageReference>
     <PackageReference Include="AeroGear.Mobile.Core.Platform.Android">
-      <Version>1.0.0-alpha-2</Version>
+      <Version>1.0.0-alpha-3</Version>
     </PackageReference>
     <PackageReference Include="AeroGear.Mobile.Security">
-      <Version>1.0.0-alpha-2</Version>
+      <Version>1.0.0-alpha-3</Version>
     </PackageReference>
     <PackageReference Include="AeroGear.Mobile.Security.Platform.Android">
-      <Version>1.0.0-alpha-2</Version>
+      <Version>1.0.0-alpha-3</Version>
     </PackageReference>
     <PackageReference Include="AeroGear.Mobile.Auth.Platform.Android">
-      <Version>1.0.0-alpha-2</Version>
+      <Version>1.0.0-alpha-3</Version>
     </PackageReference>
     <PackageReference Include="AeroGear.Mobile.Auth">
-      <Version>1.0.0-alpha-2</Version>
+      <Version>1.0.0-alpha-3</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

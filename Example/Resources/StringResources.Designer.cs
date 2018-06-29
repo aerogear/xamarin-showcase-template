@@ -30,7 +30,7 @@ namespace Example.Resources {
         public static System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.Equals(null, resourceMan)) {
-                    System.Resources.ResourceManager temp = new System.Resources.ResourceManager("Example.Resources.StringResources", typeof(StringResources).Assembly);
+                    System.Resources.ResourceManager temp = new System.Resources.ResourceManager("Example.Resources.StringResources", typeof(StringResources).GetTypeInfo().Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
