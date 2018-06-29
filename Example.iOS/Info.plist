@@ -32,11 +32,11 @@
 	<string>LaunchScreen</string>
 	<key>CFBundleName</key>
 	<string>AeroGear Xamarin Example</string>
-	<key>XSAppIconAssets</key>
-	<string>Icons.xcassets/AppIcons.appiconset</string>
 	<key>UIMainStoryboardFile</key>
 	<string>LaunchScreen</string>
 	<key>XSLaunchImageAssets</key>
 	<string>Icons.xcassets/LaunchImages.launchimage</string>
+	<key>XSAppIconAssets</key>
+	<string>Resources/Icons.xcassets/AppIcons.appiconset</string>
 </dict>
 </plist>
