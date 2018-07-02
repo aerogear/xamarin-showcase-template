@@ -212,19 +212,19 @@ If you would like to get involved in this work, please check out our community c
     <value>Authentication Failed</value>
   </data>
   <data name="idm.doc.link" xml:space="preserve">
-    <value>https://docs.aerogear.org/aerogear/latest/keycloak/index.html</value>
+    <value>https://docs.aerogear.org/aerogear/latest/keycloak/index.html#nochrome</value>
   </data>
   <data name="idm.sso.doc.link" xml:space="preserve">
-    <value>https://docs.aerogear.org/aerogear/latest/keycloak/index.html?sso=1</value>
+    <value>https://docs.aerogear.org/aerogear/latest/keycloak/index.html?sso=1#nochrome</value>
   </data>
   <data name="device.security.doc.link" xml:space="preserve">
-    <value>https://docs.aerogear.org/aerogear/latest/security/index.html</value>
+    <value>https://docs.aerogear.org/aerogear/latest/security/index.html#nochrome</value>
   </data>
   <data name="push.doc.link" xml:space="preserve">
-    <value>https://docs.aerogear.org/aerogear/latest/push/index.html</value>
+    <value>https://docs.aerogear.org/aerogear/latest/push/index.html#nochrome</value>
   </data>
   <data name="metrics.doc.link" xml:space="preserve">
-    <value>https://docs.aerogear.org/aerogear/latest/metrics/index.html</value>
+    <value>https://docs.aerogear.org/aerogear/latest/metrics/index.html#nochrome</value>
   </data>
   <data name="auth.Login" xml:space="preserve">
     <value>Authenticate</value>
