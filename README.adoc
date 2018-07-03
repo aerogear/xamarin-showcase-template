@@ -1,0 +1,183 @@
+= Secure Xamarin Template
+
+image:https://img.shields.io/badge/Android-Compatible-green.svg[]
+image:https://img.shields.io/badge/iOS-Compatible-green.svg[]
+
+[width="85%"]
+|===========================================================================================================
+|                 | *Project Info*
+| License:        | Apache License, Version 2.0
+| Build:          | msbuild
+| End User Documentation:  | link:https://docs.aerogear.org[]
+| Community Documentation: | link:https://aerogear.org[]
+| Issue tracker:  | link:https://issues.jboss.org/browse/AEROGEAR[]
+| Mailing lists:  | link:https://groups.google.com/forum/#!forum/aerogear[aerogear-dev]
+|===========================================================================================================
+
+A Xamarin Application that demonstrates features of the Aerogear Xamarin SDK on iOS and Android.
+
+For more information, please check the https://github.com/feedhenry/mobile-security[Mobile Security Project].
+
+== Features
+- link:https://docs.aerogear.org/aerogear/latest/identity-management.html[AeroGear Identity Management Service]
+- link:https://docs.aerogear.org/aerogear/latest/identity-management.html#sso[Single Sign On]
+- link:https://docs.aerogear.org/aerogear/latest/device-security.html[Device Security Checks]
+
+== Prerequisites
+
+The following softwares must be installed in order to be able to compile the application:
+
+- link:https://visualstudio.microsoft.com/xamarin/[Visual Studio Tools For Xamarin]
+- link:https://docs.microsoft.com/en-us/nuget/tools/nuget-exe-cli-reference[nuget]
+- link:https://www.mono-project.com/download/stable/[Mono (Visual Studio Channel)]
+
+== Get the sources
+The `master` branch will always track to the latest release of the SDK.
+
+[source, bash]
+----
+$ git clone git@github.com:aerogear/xamarin-showcase-template.git
+$ cd xamarin-showcase-template
+----
+
+== Run the application
+
+A Xamarin application can run on both iOS and Android.
+
+=== Run on iOS Simulator with Visual Studio
+
+[source, bash]
+----
+$ open xamarin-showcase-template.sln
+----
+
+- A Visual Studio window will open. In the top bar, choose Example.iOS->Debug->iPhone 8 iOS 11.4.
+- Click on the `play` button
+
+=== Run on Android emulator with Visual Studio
+
+[source, bash]
+----
+$ git clone git@github.com:aerogear/xamarin-showcase-template.git
+$ cd xamarin-showcase-template
+$ open xamarin-showcase-template.sln
+----
+
+- A Visual Studio window will open. In the top bar, choose Example.iOS->Debug->YOUR_DEVICE (for example: nexus_5x_api_27 (API 27))
+- Click on the :arrow_forward: button
+
+If there is no available devices in your environment, they can be added from within Visual Studio by clicking on `Tools->Device Manager`
+
+=== Run on iOS Simulator from command line
+
+1. Add the Xamarin and mono tools executables to the path
++
+[source, bash]
+----
+$ export PATH=$PATH:/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands
+----
+
+2. Compile the sources
++
+[source, bash]
+----
+$ nuget restore
+$ msbuild xamarin-showcase-template.sln /p:Configuration=Debug /p:Platform=iPhoneSimulator /t:Clean,Rebuild
+----
+
+3. Choose the device to be used to run the app
++
+[source, bash]
+----
+$ export DEVICE=":v2:runtime=com.apple.CoreSimulator.SimRuntime.iOS-11-4,devicetype=com.apple.CoreSimulator.SimDeviceType.iPhone-8"
+----
++
+The available list of runtimes can be obtained with
++
+[source, bash]
+----
+$ xcrun simctl list runtimes
+----
++
+while the list of available devices can be obtained with
++
+[source, bash]
+----
+$ xcrun simctl list devicetypes
+----
+
+4. Run the application on the selected device
++
+[source, bash]
+----
+$ mtouch  --device=$DEVICE -launchsim ./Example.iOS/bin/iPhoneSimulator/Debug/Example.iOS.app
+----
+
+=== Run on Android emulator from command line
+
+To run the showcase app
+
+1. Add the Mono and Android tools executables to the path and setup the environment
++
+[source, bash]
+----
+$ export SDK_HOME=$HOME/Library/Android/sdk
+$ export PATH=$PATH:/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/bin:$SDK_HOME/tools:$SDK_HOME/platform-tools
+----
+
+2. Compile the sources
++
+[source, bash]
+----
+$ nuget restore
+$ msbuild Example.Android/Example.Android.csproj /p:Configuration=Debug /p:EmbedAssembliesIntoApk=True /t:Clean,Rebuild,SignAndroidPackage
+----
+
+3. Get the launchable activity name
++
+[source, bash]
+----
+$ export AAPT=`find $SDK_HOME/build-tools/ -name aapt | sort -r | head -n 1`
+$ export ACTIVITY=`$AAPT dump badging Example.Android/bin/Debug/org.aerogear.xamarin.Example-Signed.apk | grep launchable-activity | perl -pe "s/.*name='(.*?)'.*/org.aerogear.xamarin.Example\/\1/"`
+----
+
+4. Start the android emulator
++
+[source, bash]
+----
+$ emulator -avd nexus_5x_api_27 -partition-size 512
+----
++
+The list of available avd can be obtained with
++
+[source, bash]
+----
+$ emulator -list-avds
+----
++
+If no avds are available, the easiest way to add one is to open Visual Studio and click on `Tools->Device Manager`.
+
+5. Install the Showcase app APK into the emulator and run it
++
+[source, bash]
+----
+$ adb -e install -r  ./Example.Android/bin/Debug/org.aerogear.xamarin.Example-Signed.apk
+$ adb shell am start -n $ACTIVITY
+----
+
+=== Work with Self-signed Certificate
+
+See link:https://docs.aerogear.org/aerogear/latest/getting-started.html#using-self-signed-certificates-in-mobile-apps[Using self signed certificates in mobile apps].
+
+== License
+
+See link:https://github.com/aerogear/xamarin-showcase-template/blob/master/LICENSE[LICENSE file]
+
+== Questions?
+
+Join our link:https://groups.google.com/forum/#!forum/aerogear[user mailing list] for any questions or help! We really hope you enjoy app development with AeroGear!
+
+== Found a bug?
+
+If you found a bug please create a ticket for us on link:https://issues.jboss.org/browse/AEROGEAR[Jira] with some steps to reproduce it.
+
