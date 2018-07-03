@@ -19,14 +19,17 @@ A Xamarin Application that demonstrates features of the Aerogear Xamarin SDK on 
 For more information, please check the https://github.com/feedhenry/mobile-security[Mobile Security Project].
 
 == Features
-- OpenID Connect Authentication
-- Single Sign-on
-- Device Trust Checks (Jailbreak/ROOT, etc)
-- 2FA with OTP (via Keycloak)
-- Authentication Brute Force Detection (via Keycloak)
-- Account Lockout Policies (via Keycloak)
-- Authentication/Access Control Auditing & Logging (via Keycloak)
-- Authenticated Calls to Protected Endpoints (via Keycloak)
+- link:https://docs.aerogear.org/aerogear/latest/identity-management.html[AeroGear Identity Management Service]
+- link:https://docs.aerogear.org/aerogear/latest/identity-management.html#sso[Single Sign On]
+- link:https://docs.aerogear.org/aerogear/latest/device-security.html[Device Security Checks]
+
+== Prerequisites
+
+The following softwares must be installed in order to be able to compile the application:
+
+- link:https://visualstudio.microsoft.com/xamarin/[Visual Studio Tools For Xamarin]
+- link:https://docs.microsoft.com/en-us/nuget/tools/nuget-exe-cli-reference[nuget]
+- link:https://www.mono-project.com/download/stable/[Mono (Visual Studio Channel)]
 
 == Get the sources
 The `master` branch will always track to the latest release of the SDK.
@@ -164,30 +167,7 @@ $ adb shell am start -n $ACTIVITY
 
 === Work with Self-signed Certificate
 
-The easiest way to support self-signed certificate is to install the CA certificate that is used to sign the certificate onto the device/simulator.
-
-1. Get the CA certificate of the server. You can use this command:
-+
-[source, bash]
-----
-openssl s_client -showcerts -connect host:port
-----
-+
-It will print out the full certificate chain of the server and you should save the content of the root certificate into a PEM file.
-
-2. Install the CA certificate onto the device.
-    - To install onto an iOS simulator, you can simply drag & drop the certificate file over it.
-    - To install on an actual ios device, you can use a file sharing service or send the certificate file as an email attachment.
-    - To install onto an Android simulator:
-        a. Drag & drop the certificate file over it.
-        b. On the simulator, open the settings app
-        c. In the top bar (`Search settings`), write _Trusted credentials_
-        d. Click on `Trusted credentials`
-        e. Click on `Install from SD card`
-        f. Choose the file you just uploaded
-3. Ensure the newly installed CA certificate is trusted.
-+
-On the iOS device/simulator, go to `Settings -> General -> About -> Certificate Trust Settings` and enable full trust for the certificate.
+See link:https://docs.aerogear.org/aerogear/latest/getting-started.html#using-self-signed-certificates-in-mobile-apps[Using self signed certificates in mobile apps].
 
 == License
 
