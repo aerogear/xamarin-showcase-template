@@ -142,7 +142,7 @@
       <Version>2.4.3.840</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms">
-      <Version>2.5.1.527436</Version>
+      <Version>3.1.0.583944</Version>
     </PackageReference>
     <PackageReference Include="AeroGear.Mobile.Auth">
       <Version>1.0.0</Version>
