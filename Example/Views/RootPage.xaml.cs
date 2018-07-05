@@ -68,7 +68,6 @@ namespace Example.Views
             IsPresented = false;
         }
 
-
         /// <summary>
         /// Replaces page when item is selected in the drawer menu.
         /// </summary>
