@@ -17,5 +17,13 @@ namespace Example.Views.Pages
             InitializeComponent();
             this.PageWebView.Source = source;
         }
+
+        public WebPage(string source, string title)
+        {
+            InitializeComponent();
+            this.PageWebView.Source = source;
+            this.Title = title;
+        }
+
     }
 }
