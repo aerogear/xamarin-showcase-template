@@ -37,7 +37,7 @@ namespace Example.Models.Constraints
         /// <returns>true if the configuration is present</returns>
         public bool Check()
         {
-            if (MobileCore.Instance.GetServiceConfigurationByType(serviceType).Length == 0)
+            if (MobileCore.Instance.GetServiceConfigurationsByType(serviceType).Length == 0)
             {
                 DisplayAlert();
                 return false;
