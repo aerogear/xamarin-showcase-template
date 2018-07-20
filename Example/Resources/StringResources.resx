@@ -196,6 +196,9 @@ If you would like to get involved in this work, please check out our community c
   <data name="button.showdocs.caption" xml:space="preserve">
     <value>Show Documentation</value>
   </data>
+  <data name="dialog.certificate.error.title" xml:space="preserve">
+    <value>Certificate Error</value>
+  </data>
   <data name="dialog.error.title" xml:space="preserve">
     <value>Error</value>
   </data>
@@ -205,6 +208,10 @@ If you would like to get involved in this work, please check out our community c
   <data name="dialog.notconfigured.message" xml:space="preserve">
     <value>The service {0} does not have a configuration in mobile-services.json. Refer to the documentation for instructions on how to configure this service.</value>
   </data>
+  <data name="dialog.certificate.error.message" xml:space="preserve">
+    <value>You may be using self signed certificates that will prevent the showcase from running properly.  Please review the documentation and configure your certificates.</value>
+  </data>
+    
   <data name="service.auth.name" xml:space="preserve">
     <value>identity management</value>
   </data>
@@ -225,6 +232,9 @@ If you would like to get involved in this work, please check out our community c
   </data>
   <data name="metrics.doc.link" xml:space="preserve">
     <value>https://docs.aerogear.org/external/showcase/xamarin/metrics.html</value>
+  </data>
+  <data name="ssl.selfsigned.doc.link">
+    <value>https://docs.aerogear.org/aerogear/latest/getting-started.html#using-self-signed-certificates-in-mobile-apps</value>
   </data>
   <data name="auth.Login" xml:space="preserve">
     <value>Authenticate</value>
