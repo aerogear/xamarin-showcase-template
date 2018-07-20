@@ -30,7 +30,7 @@ namespace Example.Resources {
         public static System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.Equals(null, resourceMan)) {
-                    System.Resources.ResourceManager temp = new System.Resources.ResourceManager("Example.Resources.StringResources", typeof(StringResources).GetTypeInfo().Assembly);
+                    System.Resources.ResourceManager temp = new System.Resources.ResourceManager("Example.Resources.StringResources", typeof(StringResources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -191,6 +191,12 @@ namespace Example.Resources {
             }
         }
         
+        public static string dialog_certificate_error_title {
+            get {
+                return ResourceManager.GetString("dialog.certificate.error.title", resourceCulture);
+            }
+        }
+        
         public static string dialog_error_title {
             get {
                 return ResourceManager.GetString("dialog.error.title", resourceCulture);
@@ -206,6 +212,12 @@ namespace Example.Resources {
         public static string dialog_notconfigured_message {
             get {
                 return ResourceManager.GetString("dialog.notconfigured.message", resourceCulture);
+            }
+        }
+        
+        public static string dialog_certificate_error_message {
+            get {
+                return ResourceManager.GetString("dialog.certificate.error.message", resourceCulture);
             }
         }
         
@@ -248,6 +260,12 @@ namespace Example.Resources {
         public static string metrics_doc_link {
             get {
                 return ResourceManager.GetString("metrics.doc.link", resourceCulture);
+            }
+        }
+        
+        public static string ssl_selfsigned_doc_link {
+            get {
+                return ResourceManager.GetString("ssl.selfsigned.doc.link", resourceCulture);
             }
         }
         

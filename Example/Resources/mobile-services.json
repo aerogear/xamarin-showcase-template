@@ -1,9 +1,16 @@
 ﻿{
   "version": 1,
-  "clusterName": "https://192.168.37.1:8443",
-  "namespace": "myproject",
-  "clientId": "app-cordova",
+  "clusterName": "https://192.168.1.6:8443",
+  "namespace": "metrics",
+  "clientId": "myapp-xamarin",
   "services": [
+    {
+      "id": "metrics-myapp-xamarin",
+      "name": "metrics",
+      "type": "metrics",
+      "url": "https://aerogear-app-metrics-metrics.192.168.1.6.nip.io/metrics",
+      "config": {}
+    },
     {
       "id": "keycloak",
       "name": "keycloak",
@@ -16,14 +23,6 @@
         "resource": "client-app",
         "ssl-required": "external",
         "url": "https://keycloak.security.feedhenry.org/auth"
-      }
-    },
-    {
-      "id": "metrics",
-      "name": "metrics",
-      "url": "http://192.168.0.101:3000/metrics",
-      "type": "metrics",
-      "config": {
       }
     }
   ]
