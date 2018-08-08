@@ -4,9 +4,9 @@ using AeroGear.Mobile.Security;
 
 namespace Example.Security
 {
-    public interface ISecurityCheckProvider
+    public interface IDeviceCheckProvider
     {
-        IList<ISecurityCheck> SecurityChecks { get; }
+        IList<IDeviceCheck> DeviceChecks { get; }
     }
 }
 

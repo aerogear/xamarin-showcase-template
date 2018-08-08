@@ -99,7 +99,7 @@
     <None Include="Entitlements.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Auth\AuthenticateOptionsProvider.cs" />
-    <Compile Include="Security\SecurityCheckProvider.cs" />
+    <Compile Include="Security\DeviceCheckProvider.cs" />
     <Compile Include="Security\UnsecureAlertWarning.cs" />
     <Compile Include="Resources\SecurityResources.Designer.cs">
       <DependentUpon>SecurityResources.resx</DependentUpon>
@@ -126,8 +126,32 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Example\Example.csproj">
-      <Project>{30C55998-0E1C-4AE9-A8A9-58815C2D5048}</Project>
+      <Project>{F0217CFC-1E56-4703-AECE-EE4196A59B17}</Project>
       <Name>Example</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Security\Security\Security.csproj">
+      <Project>{E6A4E78F-25B7-4D82-89A8-F394B82E557A}</Project>
+      <Name>Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Security\Security.Platform.iOS\Security.Platform.iOS.csproj">
+      <Project>{4C856B1A-CE05-4880-B315-D3D3FEA3B3CC}</Project>
+      <Name>Security.Platform.iOS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Auth\Auth\Auth.csproj">
+      <Project>{55FF3B02-07D1-46F3-B0D5-584D3B98467E}</Project>
+      <Name>Auth</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Auth\Auth.Platform.iOS\Auth.Platform.iOS.csproj">
+      <Project>{CBB87B9E-D526-46B1-B05A-AD3D383EACED}</Project>
+      <Name>Auth.Platform.iOS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Core\Core.csproj">
+      <Project>{F1EA4BBA-D775-45C0-99DA-DB0590BEE87E}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Core.Platform.iOS\Core.Platform.iOS.csproj">
+      <Project>{C5B8A6AF-90D0-43DC-B097-A5F3CEB01E9F}</Project>
+      <Name>Core.Platform.iOS</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -142,25 +166,7 @@
       <Version>2.4.3.840</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms">
-      <Version>3.1.0.583944</Version>
-    </PackageReference>
-    <PackageReference Include="AeroGear.Mobile.Auth">
-      <Version>1.1.0-alpha.2</Version>
-    </PackageReference>
-    <PackageReference Include="AeroGear.Mobile.Security.Platform.iOS">
-      <Version>1.1.0-alpha.2</Version>
-    </PackageReference>
-    <PackageReference Include="AeroGear.Mobile.Auth.Platform.iOS">
-      <Version>1.1.0-alpha.2</Version>
-    </PackageReference>
-    <PackageReference Include="AeroGear.Mobile.Core.Platform.iOS">
-      <Version>1.1.0-alpha.2</Version>
-    </PackageReference>
-    <PackageReference Include="AeroGear.Mobile.Security">
-      <Version>1.1.0-alpha.2</Version>
-    </PackageReference>
-    <PackageReference Include="AeroGear.Mobile.Core">
-      <Version>1.1.0-alpha.2</Version>
+      <Version>3.1.0.697729</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup />
