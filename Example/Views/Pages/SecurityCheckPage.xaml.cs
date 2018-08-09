@@ -18,7 +18,7 @@ namespace Example.Views.Pages
         private const int TRUST_SCORE_DECIMAL_PLACE_COUNT = 0;
         private const decimal TRUST_SCORE_INITIAL_PERCENTAGE = 0;
 
-        private ICollection<SecurityCheckResult> securityCheckResults;
+        private ICollection<DeviceCheckResult> securityCheckResults;
         private decimal trustScore = TRUST_SCORE_INITIAL_PERCENTAGE;
 
         private int passedChecksCount = 0;
@@ -28,7 +28,7 @@ namespace Example.Views.Pages
 
         public string ResultMessage => String.Format("({0} out of {1} checks passing)", passedChecksCount, totalChecksCount);
 
-        public ICollection<SecurityCheckResult> CheckResults => this.securityCheckResults;
+        public ICollection<DeviceCheckResult> CheckResults => this.securityCheckResults;
 
         public decimal TrustScore => this.trustScore;
 
@@ -44,12 +44,12 @@ namespace Example.Views.Pages
             InitializeComponent();
             BindingContext = this;
 
-            ReportCheckResults(DependencyService.Get<ISecurityCheckProvider>().SecurityChecks);
+            ReportCheckResults(DependencyService.Get<IDeviceCheckProvider>().DeviceChecks);
         }
 
-        private void ReportCheckResults(ICollection<ISecurityCheck> securityChecks)
+        private void ReportCheckResults(ICollection<IDeviceCheck> securityChecks)
         {
-            securityCheckResults = SecurityCheckExecutor.newSyncExecutor().WithSecurityCheck(securityChecks).WithMetricsService(this.metricsService).Build().Execute().Values;
+            securityCheckResults = DeviceCheckExecutor.newSyncExecutor().WithDeviceCheck(securityChecks).WithMetricsService(this.metricsService).Build().Execute().Values;
 
             this.trustScore = CalculateTrustScore(securityCheckResults);
             NotifyPropertyChanged(nameof(CheckResults));
@@ -74,13 +74,13 @@ namespace Example.Views.Pages
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        private decimal CalculateTrustScore(ICollection<SecurityCheckResult> results)
+        private decimal CalculateTrustScore(ICollection<DeviceCheckResult> results)
         {
             int failedResultCount = 0;
 
-            foreach(SecurityCheckResult result in results)
+            foreach(DeviceCheckResult result in results)
             {
-                failedResultCount += ((SecurityCheckResultDecorator)result).IsSecure ? 0 : 1;
+                failedResultCount += ((DeviceCheckResultDecorator)result).IsSecure ? 0 : 1;
             }
 
             this.totalChecksCount = results.Count;
@@ -91,7 +91,7 @@ namespace Example.Views.Pages
 
         void OnRefreshClicked(object sender, System.EventArgs e)
         {
-            ReportCheckResults(DependencyService.Get<ISecurityCheckProvider>().SecurityChecks);
+            ReportCheckResults(DependencyService.Get<IDeviceCheckProvider>().DeviceChecks);
         }
     }
 }

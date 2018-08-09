@@ -4,14 +4,14 @@ using Xamarin.Forms;
 
 namespace Example.Security
 {
-    public class DeviceCheckSecurityDecorator : ISecurityCheck
+    public class DeviceCheckSecurityDecorator : IDeviceCheck
     {
-        private readonly ISecurityCheck securityCheck;
+        private readonly IDeviceCheck securityCheck;
         private readonly bool secureWhenFailed;
         private readonly string secureMessage;
         private readonly string unsecureMessage;
 
-        public DeviceCheckSecurityDecorator(ISecurityCheck securityCheck, string secureMessage, string unsecureMessage, bool secureWhenFailed = false)
+        public DeviceCheckSecurityDecorator(IDeviceCheck securityCheck, string secureMessage, string unsecureMessage, bool secureWhenFailed = false)
         {
             this.securityCheck = securityCheck;
             this.secureWhenFailed = secureWhenFailed;
@@ -23,20 +23,20 @@ namespace Example.Security
 
         public string GetName() => securityCheck.GetName();
 
-        public SecurityCheckResult Check()
+        public DeviceCheckResult Check()
         {
-            return new SecurityCheckResultDecorator(this, securityCheck.Check(), secureMessage, unsecureMessage, secureWhenFailed);
+            return new DeviceCheckResultDecorator(this, securityCheck.Check(), secureMessage, unsecureMessage, secureWhenFailed);
         }
     }
 
-    public class SecurityCheckResultDecorator : SecurityCheckResult
+    public class DeviceCheckResultDecorator : DeviceCheckResult
     {
         public readonly bool IsSecure;
         private readonly string secureMessage;
         private readonly string unsecureMessage;
-        private readonly SecurityCheckResult result;
+        private readonly DeviceCheckResult result;
 
-        public SecurityCheckResultDecorator(ISecurityCheck check, SecurityCheckResult result, string secureMessage, string unsecureMessage, bool secureWhenFailed) : base(check, result.Passed)
+        public DeviceCheckResultDecorator(IDeviceCheck check, DeviceCheckResult result, string secureMessage, string unsecureMessage, bool secureWhenFailed) : base(check, result.Passed)
         {
             IsSecure = secureWhenFailed ? !result.Passed : result.Passed;
             this.secureMessage = secureMessage;
