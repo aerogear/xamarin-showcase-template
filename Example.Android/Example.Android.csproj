@@ -70,23 +70,23 @@
     <PackageReference Include="Xamarin.Forms">
       <Version>3.1.0.697729</Version>
     </PackageReference>
-    <PackageReference Include="AeroGear.Mobile.Core">
-      <Version>1.1.0-alpha.3</Version>
-    </PackageReference>
-    <PackageReference Include="AeroGear.Mobile.Security.Platform.Android">
-      <Version>1.1.0-alpha.3</Version>
-    </PackageReference>
     <PackageReference Include="AeroGear.Mobile.Auth">
-      <Version>1.1.0-alpha.3</Version>
-    </PackageReference>
-    <PackageReference Include="AeroGear.Mobile.Security">
-      <Version>1.1.0-alpha.3</Version>
-    </PackageReference>
-    <PackageReference Include="AeroGear.Mobile.Core.Platform.Android">
-      <Version>1.1.0-alpha.3</Version>
+      <Version>2.0.1</Version>
     </PackageReference>
     <PackageReference Include="AeroGear.Mobile.Auth.Platform.Android">
-      <Version>1.1.0-alpha.3</Version>
+      <Version>2.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="AeroGear.Mobile.Core">
+      <Version>2.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="AeroGear.Mobile.Core.Platform.Android">
+      <Version>2.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="AeroGear.Mobile.Security">
+      <Version>2.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="AeroGear.Mobile.Security.Platform.Android">
+      <Version>2.0.1</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
