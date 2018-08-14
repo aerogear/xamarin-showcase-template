@@ -39,7 +39,7 @@ namespace Example.iOS.Security
                     ));
                 deviceChecks.Add(
                     new DeviceCheckSecurityDecorator(
-                        deviceCheckFactory.create(SecurityChecksEnum.JAILBROKEN_ENABLED),
+                        deviceCheckFactory.create(SecurityChecksEnum.JAILBREAK_ENABLED),
                         SecurityResources.device_jailbreak_not_detected,
                         SecurityResources.device_jailbreak_detected,
                         true
